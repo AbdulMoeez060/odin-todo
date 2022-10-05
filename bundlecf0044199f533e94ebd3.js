@@ -528,24 +528,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/generateJoke.js":
-/*!*****************************!*\
-  !*** ./src/generateJoke.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function generateJoke(){
-    return "i don't like stairs \nThe are always upto something...";
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (generateJoke);
-
 /***/ })
 
 /******/ 	});
@@ -628,14 +610,12 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _generateJoke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generateJoke */ "./src/generateJoke.js");
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 
 
-
-console.log((0,_generateJoke__WEBPACK_IMPORTED_MODULE_0__["default"])());
+console.log('generateJoke');
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle68b5d63983cc878d8adf.js.map
+//# sourceMappingURL=bundlecf0044199f533e94ebd3.js.map
