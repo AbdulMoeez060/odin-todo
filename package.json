@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter",
+  "name": "odin-todo",
   "version": "1.0.0",
-  "description": "Starter files for any project with webpack setup.",
+  "description": "A simple Todo List.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AbdulMoeez060/webpack-starter.git"
+    "url": "git+https://github.com/AbdulMoeez060/odin-todo.git"
   },
   "author": "Abdul Moeez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AbdulMoeez060/webpack-starter/issues"
+    "url": "https://github.com/AbdulMoeez060/odin-todo/issues"
   },
-  "homepage": "https://github.com/AbdulMoeez060/webpack-starter#readme",
+  "homepage": "https://github.com/AbdulMoeez060/odin-todo/",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
