@@ -5,6 +5,3 @@ import tasks from "./assets/tasks.png";
 import today from "./assets/today.png";
 import week from "./assets/week.png";
 import add from "./assets/add.png";
-
-
-
