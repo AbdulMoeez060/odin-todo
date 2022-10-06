@@ -20,8 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*{\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;AACd","sourcesContent":["*{\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*{\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n    --main-green : #1ABC9C;\r\n    --second-green :#2ECC71;\r\n    --bgColor2: #ececec;\r\n    --bgColor3: #f2f3f5;\r\n    --bgColor1: #fefcfe;\r\n    --bgColorPopUp: #f3f1f3;\r\n    --textColor: #374958;\r\n    --accentDark: #2abd67;\r\n}\r\nbody{\r\n    height: 100%;\r\n}\r\n\r\nheader{\r\n    position: relative;\r\n    height: 70px;\r\n    background-color: var(--bgColor3);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-bottom: 2px solid var(--accentDark);\r\n\r\n}\r\n.hamburger{\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    top: 6px;\r\n    left: 10px;\r\n    padding: 4px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.hamburger:hover{\r\n    background-color: rgba(128, 128, 128, 0.267);\r\n\r\n}\r\n.hamburger:active{\r\n    transform: scale(0.9);\r\n}\r\n.logo{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 30px;\r\n    font-weight: 600;\r\n    gap: 8px;\r\n    cursor: pointer;\r\n\r\n}\r\n.logo >span{\r\n    color: var(--second-green);\r\n}\r\n\r\n.container{\r\n    display: flex;\r\n    position: relative;\r\n    box-sizing: border-box;\r\n    height: 100%;\r\n}\r\n.sidebar{\r\n    background-color: var(--accentDark);\r\n    box-sizing: border-box;\r\n    width: 350px;\r\n    user-select: none;\r\n}\r\n.hide{\r\n    top: 0;\r\n    left: 0;\r\n    pointer-events: none !important;\r\n    position: absolute !important;\r\n    max-height: 0 !important;\r\n    transition: max-height 1s ease-out !important;\r\n    opacity: 0 !important;\r\n}\r\n.content{\r\n    background-color: var(--main-green);\r\n    padding: 30px 50px;\r\n    flex: 1;\r\n    min-height: 100vh;\r\n    box-sizing: border-box;\r\n}\r\n\r\n@media (max-width:930px){\r\n    \r\n    .container{\r\n        flex-direction: column;\r\n    }\r\n    .sidebar{\r\n        z-index: 3;\r\n        overflow:auto;\r\n        width:auto;\r\n    }\r\n    \r\n}\r\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AACA;IACI,SAAS;IACT,UAAU;IACV,kCAAkC;IAClC,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,mBAAmB;IACnB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;AACzB;AACA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,iCAAiC;IACjC,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,0CAA0C;;AAE9C;AACA;IACI,kBAAkB;IAClB,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,QAAQ;IACR,UAAU;IACV,YAAY;IACZ,kBAAkB;IAClB,eAAe;AACnB;AACA;IACI,4CAA4C;;AAEhD;AACA;IACI,qBAAqB;AACzB;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,eAAe;IACf,gBAAgB;IAChB,QAAQ;IACR,eAAe;;AAEnB;AACA;IACI,0BAA0B;AAC9B;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,sBAAsB;IACtB,YAAY;AAChB;AACA;IACI,mCAAmC;IACnC,sBAAsB;IACtB,YAAY;IACZ,iBAAiB;AACrB;AACA;IACI,MAAM;IACN,OAAO;IACP,+BAA+B;IAC/B,6BAA6B;IAC7B,wBAAwB;IACxB,6CAA6C;IAC7C,qBAAqB;AACzB;AACA;IACI,mCAAmC;IACnC,kBAAkB;IAClB,OAAO;IACP,iBAAiB;IACjB,sBAAsB;AAC1B;;AAEA;;IAEI;QACI,sBAAsB;IAC1B;IACA;QACI,UAAU;QACV,aAAa;QACb,UAAU;IACd;;AAEJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap');\r\n*{\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n    --main-green : #1ABC9C;\r\n    --second-green :#2ECC71;\r\n    --bgColor2: #ececec;\r\n    --bgColor3: #f2f3f5;\r\n    --bgColor1: #fefcfe;\r\n    --bgColorPopUp: #f3f1f3;\r\n    --textColor: #374958;\r\n    --accentDark: #2abd67;\r\n}\r\nbody{\r\n    height: 100%;\r\n}\r\n\r\nheader{\r\n    position: relative;\r\n    height: 70px;\r\n    background-color: var(--bgColor3);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-bottom: 2px solid var(--accentDark);\r\n\r\n}\r\n.hamburger{\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    top: 6px;\r\n    left: 10px;\r\n    padding: 4px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.hamburger:hover{\r\n    background-color: rgba(128, 128, 128, 0.267);\r\n\r\n}\r\n.hamburger:active{\r\n    transform: scale(0.9);\r\n}\r\n.logo{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 30px;\r\n    font-weight: 600;\r\n    gap: 8px;\r\n    cursor: pointer;\r\n\r\n}\r\n.logo >span{\r\n    color: var(--second-green);\r\n}\r\n\r\n.container{\r\n    display: flex;\r\n    position: relative;\r\n    box-sizing: border-box;\r\n    height: 100%;\r\n}\r\n.sidebar{\r\n    background-color: var(--accentDark);\r\n    box-sizing: border-box;\r\n    width: 350px;\r\n    user-select: none;\r\n}\r\n.hide{\r\n    top: 0;\r\n    left: 0;\r\n    pointer-events: none !important;\r\n    position: absolute !important;\r\n    max-height: 0 !important;\r\n    transition: max-height 1s ease-out !important;\r\n    opacity: 0 !important;\r\n}\r\n.content{\r\n    background-color: var(--main-green);\r\n    padding: 30px 50px;\r\n    flex: 1;\r\n    min-height: 100vh;\r\n    box-sizing: border-box;\r\n}\r\n\r\n@media (max-width:930px){\r\n    \r\n    .container{\r\n        flex-direction: column;\r\n    }\r\n    .sidebar{\r\n        z-index: 3;\r\n        overflow:auto;\r\n        width:auto;\r\n    }\r\n    \r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -528,6 +529,26 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/hamburger.png":
+/*!**********************************!*\
+  !*** ./src/assets/hamburger.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "hamburger.png";
+
+/***/ }),
+
+/***/ "./src/assets/todo.png":
+/*!*****************************!*\
+  !*** ./src/assets/todo.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "todo.png";
+
 /***/ })
 
 /******/ 	});
@@ -581,6 +602,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -597,6 +630,26 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -611,11 +664,14 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _assets_hamburger_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hamburger.png */ "./src/assets/hamburger.png");
+/* harmony import */ var _assets_todo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/todo.png */ "./src/assets/todo.png");
 
 
-console.log('generateJoke');
+
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle5eeee6f44f8dbcd4c78c.js.map
+//# sourceMappingURL=bundlea554bf3a8bf34efa529c.js.map
