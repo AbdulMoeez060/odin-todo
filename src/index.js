@@ -1,3 +1,2 @@
 import './styles/main.css';
-
-console.log('generateJoke');
+import hamburger from './assets/hamburger.png';

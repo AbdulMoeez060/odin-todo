@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap');
 *{
-    color: red;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    --main-green : #1ABC9C;
+    --second-green :#2ECC71;
+    --bgColor2: #ececec;
+    --bgColor3: #f2f3f5;
+    --bgColor1: #fefcfe;
+    --bgColorPopUp: #f3f1f3;
+    --textColor: #374958;
+    --accentDark: #2abd67;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--bgColor3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--main-green);
+}
+.hamburger{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5px;
+    left: 10px;
+    padding: 3px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+.logo >span{
+    margin-left: 8px;
+    color: var(--second-green);
 }
