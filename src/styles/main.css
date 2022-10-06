@@ -16,21 +16,33 @@
 header{
     position: fixed;
     width: 100vw;
-    height: 60px;
+    height: 70px;
     background-color: var(--bgColor3);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid var(--main-green);
+    border-bottom: 2px solid var(--accentDark);
+
 }
 .hamburger{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 5px;
+    top: 6px;
     left: 10px;
-    padding: 3px;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.hamburger:hover{
+    background-color: rgba(128, 128, 128, 0.267);
+
+}
+.hamburger:active{
+    transform: scale(0.9);
+
 }
 .logo{
     display: flex;
@@ -38,8 +50,10 @@ header{
     justify-content: center;
     font-size: 30px;
     font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+
 }
 .logo >span{
-    margin-left: 8px;
     color: var(--second-green);
 }
