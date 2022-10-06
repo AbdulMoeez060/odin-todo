@@ -12,10 +12,12 @@
     --textColor: #374958;
     --accentDark: #2abd67;
 }
+body{
+    height: 100%;
+}
 
 header{
-    position: fixed;
-    width: 100vw;
+    position: relative;
     height: 70px;
     background-color: var(--bgColor3);
     display: flex;
@@ -34,7 +36,6 @@ header{
     padding: 4px;
     border-radius: 4px;
     cursor: pointer;
-
 }
 .hamburger:hover{
     background-color: rgba(128, 128, 128, 0.267);
@@ -42,7 +43,6 @@ header{
 }
 .hamburger:active{
     transform: scale(0.9);
-
 }
 .logo{
     display: flex;
@@ -56,4 +56,46 @@ header{
 }
 .logo >span{
     color: var(--second-green);
+}
+
+.container{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+}
+.sidebar{
+    background-color: var(--accentDark);
+    box-sizing: border-box;
+    width: 350px;
+    user-select: none;
+}
+.hide{
+    top: 0;
+    left: 0;
+    pointer-events: none !important;
+    position: absolute !important;
+    max-height: 0 !important;
+    transition: max-height 1s ease-out !important;
+    opacity: 0 !important;
+}
+.content{
+    background-color: var(--main-green);
+    padding: 30px 50px;
+    flex: 1;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+@media (max-width:930px){
+    
+    .container{
+        flex-direction: column;
+    }
+    .sidebar{
+        z-index: 3;
+        overflow:auto;
+        width:auto;
+    }
+    
 }
