@@ -10,7 +10,9 @@
   --bgColor1: #fefcfe;
   --bgColorPopUp: #f3f1f3;
   --textColor: #374958;
-  --accentDark: #2abd67;
+  --accentDark: #1f8d4d;
+  --accent: #2abd67;
+
 }
 body {
   height: 100%;
@@ -62,10 +64,51 @@ header {
   height: 100%;
 }
 .sidebar {
-  background-color: var(--accentDark);
+  background-color: var(--bgColor1);
   box-sizing: border-box;
   width: 350px;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.home>button{
+    display: flex;
+    justify-content: start;
+    height: 40px;
+    gap: 15px;
+    align-items: center;
+    font-size: 18px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.home>button:hover{
+    border-radius: 5px;
+    background-color: var(--bgColor2);
+}
+.home>button.active{
+    border-radius: 0 5px 5px 0;
+    border-left: 5px solid var(--accent);
+    background-color: #2abd6770;
+}
+.home>button.active:hover{
+    filter: brightness(90%) !important;
+}
+
+.sidebar h2{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-weight: 600;
 }
 .hide {
   top: 0;
@@ -83,6 +126,8 @@ header {
   min-height: 100vh;
   box-sizing: border-box;
 }
+
+
 
 @media (max-width: 930px) {
   .container {
