@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*{\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n    --main-green : #1ABC9C;\r\n    --second-green :#2ECC71;\r\n    --bgColor2: #ececec;\r\n    --bgColor3: #f2f3f5;\r\n    --bgColor1: #fefcfe;\r\n    --bgColorPopUp: #f3f1f3;\r\n    --textColor: #374958;\r\n    --accentDark: #2abd67;\r\n}\r\nbody{\r\n    height: 100%;\r\n}\r\n\r\nheader{\r\n    position: relative;\r\n    height: 70px;\r\n    background-color: var(--bgColor3);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-bottom: 2px solid var(--accentDark);\r\n\r\n}\r\n.hamburger{\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    top: 6px;\r\n    left: 10px;\r\n    padding: 4px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.hamburger:hover{\r\n    background-color: rgba(128, 128, 128, 0.267);\r\n\r\n}\r\n.hamburger:active{\r\n    transform: scale(0.9);\r\n}\r\n.logo{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 30px;\r\n    font-weight: 600;\r\n    gap: 8px;\r\n    cursor: pointer;\r\n\r\n}\r\n.logo >span{\r\n    color: var(--second-green);\r\n}\r\n\r\n.container{\r\n    display: flex;\r\n    position: relative;\r\n    box-sizing: border-box;\r\n    height: 100%;\r\n}\r\n.sidebar{\r\n    background-color: var(--accentDark);\r\n    box-sizing: border-box;\r\n    width: 350px;\r\n    user-select: none;\r\n}\r\n.hide{\r\n    top: 0;\r\n    left: 0;\r\n    pointer-events: none !important;\r\n    position: absolute !important;\r\n    max-height: 0 !important;\r\n    transition: max-height 1s ease-out !important;\r\n    opacity: 0 !important;\r\n}\r\n.content{\r\n    background-color: var(--main-green);\r\n    padding: 30px 50px;\r\n    flex: 1;\r\n    min-height: 100vh;\r\n    box-sizing: border-box;\r\n}\r\n\r\n@media (max-width:930px){\r\n    \r\n    .container{\r\n        flex-direction: column;\r\n    }\r\n    .sidebar{\r\n        z-index: 3;\r\n        overflow:auto;\r\n        width:auto;\r\n    }\r\n    \r\n}\r\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AACA;IACI,SAAS;IACT,UAAU;IACV,kCAAkC;IAClC,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,mBAAmB;IACnB,mBAAmB;IACnB,uBAAuB;IACvB,oBAAoB;IACpB,qBAAqB;AACzB;AACA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,iCAAiC;IACjC,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,0CAA0C;;AAE9C;AACA;IACI,kBAAkB;IAClB,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,QAAQ;IACR,UAAU;IACV,YAAY;IACZ,kBAAkB;IAClB,eAAe;AACnB;AACA;IACI,4CAA4C;;AAEhD;AACA;IACI,qBAAqB;AACzB;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,eAAe;IACf,gBAAgB;IAChB,QAAQ;IACR,eAAe;;AAEnB;AACA;IACI,0BAA0B;AAC9B;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,sBAAsB;IACtB,YAAY;AAChB;AACA;IACI,mCAAmC;IACnC,sBAAsB;IACtB,YAAY;IACZ,iBAAiB;AACrB;AACA;IACI,MAAM;IACN,OAAO;IACP,+BAA+B;IAC/B,6BAA6B;IAC7B,wBAAwB;IACxB,6CAA6C;IAC7C,qBAAqB;AACzB;AACA;IACI,mCAAmC;IACnC,kBAAkB;IAClB,OAAO;IACP,iBAAiB;IACjB,sBAAsB;AAC1B;;AAEA;;IAEI;QACI,sBAAsB;IAC1B;IACA;QACI,UAAU;QACV,aAAa;QACb,UAAU;IACd;;AAEJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap');\r\n*{\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n    --main-green : #1ABC9C;\r\n    --second-green :#2ECC71;\r\n    --bgColor2: #ececec;\r\n    --bgColor3: #f2f3f5;\r\n    --bgColor1: #fefcfe;\r\n    --bgColorPopUp: #f3f1f3;\r\n    --textColor: #374958;\r\n    --accentDark: #2abd67;\r\n}\r\nbody{\r\n    height: 100%;\r\n}\r\n\r\nheader{\r\n    position: relative;\r\n    height: 70px;\r\n    background-color: var(--bgColor3);\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-bottom: 2px solid var(--accentDark);\r\n\r\n}\r\n.hamburger{\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    top: 6px;\r\n    left: 10px;\r\n    padding: 4px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n.hamburger:hover{\r\n    background-color: rgba(128, 128, 128, 0.267);\r\n\r\n}\r\n.hamburger:active{\r\n    transform: scale(0.9);\r\n}\r\n.logo{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 30px;\r\n    font-weight: 600;\r\n    gap: 8px;\r\n    cursor: pointer;\r\n\r\n}\r\n.logo >span{\r\n    color: var(--second-green);\r\n}\r\n\r\n.container{\r\n    display: flex;\r\n    position: relative;\r\n    box-sizing: border-box;\r\n    height: 100%;\r\n}\r\n.sidebar{\r\n    background-color: var(--accentDark);\r\n    box-sizing: border-box;\r\n    width: 350px;\r\n    user-select: none;\r\n}\r\n.hide{\r\n    top: 0;\r\n    left: 0;\r\n    pointer-events: none !important;\r\n    position: absolute !important;\r\n    max-height: 0 !important;\r\n    transition: max-height 1s ease-out !important;\r\n    opacity: 0 !important;\r\n}\r\n.content{\r\n    background-color: var(--main-green);\r\n    padding: 30px 50px;\r\n    flex: 1;\r\n    min-height: 100vh;\r\n    box-sizing: border-box;\r\n}\r\n\r\n@media (max-width:930px){\r\n    \r\n    .container{\r\n        flex-direction: column;\r\n    }\r\n    .sidebar{\r\n        z-index: 3;\r\n        overflow:auto;\r\n        width:auto;\r\n    }\r\n    \r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Poppins\", sans-serif;\n  --main-green: #1abc9c;\n  --second-green: #2ecc71;\n  --bgColor2: #ececec;\n  --bgColor3: #f2f3f5;\n  --bgColor1: #fefcfe;\n  --bgColorPopUp: #f3f1f3;\n  --textColor: #374958;\n  --accentDark: #1f8d4d;\n  --accent: #2abd67;\n}\nbody {\n  height: 100%;\n}\n\nheader {\n  position: relative;\n  height: 70px;\n  background-color: var(--bgColor3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: 2px solid var(--accentDark);\n}\n.hamburger {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 6px;\n  left: 10px;\n  padding: 4px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.hamburger:hover {\n  background-color: rgba(128, 128, 128, 0.267);\n}\n.hamburger:active {\n  transform: scale(0.9);\n}\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 30px;\n  font-weight: 600;\n  gap: 8px;\n  cursor: pointer;\n}\n.logo > span {\n  color: var(--second-green);\n}\n\n.container {\n  display: flex;\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n}\n.sidebar {\n  background-color: var(--bgColor1);\n  box-sizing: border-box;\n  width: 350px;\n  user-select: none;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  gap: 15px;\n}\n\n.home,\n.projects {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.sidebar button {\n  display: flex;\n  justify-content: start;\n  height: 40px;\n  gap: 15px;\n  align-items: center;\n  font-size: 18px;\n  padding-left: 10px;\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n.sidebar button:hover {\n  border-radius: 5px;\n  background-color: var(--bgColor2);\n}\n.home > button.active {\n  border-radius: 0 5px 5px 0;\n  border-left: 5px solid var(--accent);\n  background-color: #2abd6770;\n}\n.home > button.active:hover {\n  filter: brightness(90%) !important;\n}\n\n.sidebar h2 {\n  border-bottom: 1px solid black;\n  padding-bottom: 5px;\n  padding-left: 5px;\n  font-weight: 600;\n}\n\n.hide {\n  top: 0;\n  left: 0;\n  pointer-events: none !important;\n  position: absolute !important;\n  max-height: 0 !important;\n  transition: max-height 1s ease-out !important;\n  opacity: 0 !important;\n}\n.content {\n  background-color: var(--main-green);\n  padding: 30px 50px;\n  flex: 1;\n  min-height: 100vh;\n  box-sizing: border-box;\n}\n\n@media (max-width: 930px) {\n  .container {\n    flex-direction: column;\n  }\n  .sidebar {\n    z-index: 3;\n    overflow: auto;\n    width: auto;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AACA;EACE,SAAS;EACT,UAAU;EACV,kCAAkC;EAClC,qBAAqB;EACrB,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,mBAAmB;EACnB,uBAAuB;EACvB,oBAAoB;EACpB,qBAAqB;EACrB,iBAAiB;AACnB;AACA;EACE,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,iCAAiC;EACjC,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,0CAA0C;AAC5C;AACA;EACE,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,QAAQ;EACR,UAAU;EACV,YAAY;EACZ,kBAAkB;EAClB,eAAe;AACjB;AACA;EACE,4CAA4C;AAC9C;AACA;EACE,qBAAqB;AACvB;AACA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,eAAe;EACf,gBAAgB;EAChB,QAAQ;EACR,eAAe;AACjB;AACA;EACE,0BAA0B;AAC5B;;AAEA;EACE,aAAa;EACb,kBAAkB;EAClB,sBAAsB;EACtB,YAAY;AACd;AACA;EACE,iCAAiC;EACjC,sBAAsB;EACtB,YAAY;EACZ,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,SAAS;AACX;;AAEA;;EAEE,aAAa;EACb,sBAAsB;EACtB,SAAS;AACX;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,YAAY;EACZ,SAAS;EACT,mBAAmB;EACnB,eAAe;EACf,kBAAkB;EAClB,aAAa;EACb,YAAY;EACZ,6BAA6B;AAC/B;AACA;EACE,kBAAkB;EAClB,iCAAiC;AACnC;AACA;EACE,0BAA0B;EAC1B,oCAAoC;EACpC,2BAA2B;AAC7B;AACA;EACE,kCAAkC;AACpC;;AAEA;EACE,8BAA8B;EAC9B,mBAAmB;EACnB,iBAAiB;EACjB,gBAAgB;AAClB;;AAEA;EACE,MAAM;EACN,OAAO;EACP,+BAA+B;EAC/B,6BAA6B;EAC7B,wBAAwB;EACxB,6CAA6C;EAC7C,qBAAqB;AACvB;AACA;EACE,mCAAmC;EACnC,kBAAkB;EAClB,OAAO;EACP,iBAAiB;EACjB,sBAAsB;AACxB;;AAEA;EACE;IACE,sBAAsB;EACxB;EACA;IACE,UAAU;IACV,cAAc;IACd,WAAW;EACb;AACF","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap\");\n* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Poppins\", sans-serif;\n  --main-green: #1abc9c;\n  --second-green: #2ecc71;\n  --bgColor2: #ececec;\n  --bgColor3: #f2f3f5;\n  --bgColor1: #fefcfe;\n  --bgColorPopUp: #f3f1f3;\n  --textColor: #374958;\n  --accentDark: #1f8d4d;\n  --accent: #2abd67;\n}\nbody {\n  height: 100%;\n}\n\nheader {\n  position: relative;\n  height: 70px;\n  background-color: var(--bgColor3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: 2px solid var(--accentDark);\n}\n.hamburger {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 6px;\n  left: 10px;\n  padding: 4px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.hamburger:hover {\n  background-color: rgba(128, 128, 128, 0.267);\n}\n.hamburger:active {\n  transform: scale(0.9);\n}\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 30px;\n  font-weight: 600;\n  gap: 8px;\n  cursor: pointer;\n}\n.logo > span {\n  color: var(--second-green);\n}\n\n.container {\n  display: flex;\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n}\n.sidebar {\n  background-color: var(--bgColor1);\n  box-sizing: border-box;\n  width: 350px;\n  user-select: none;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  gap: 15px;\n}\n\n.home,\n.projects {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.sidebar button {\n  display: flex;\n  justify-content: start;\n  height: 40px;\n  gap: 15px;\n  align-items: center;\n  font-size: 18px;\n  padding-left: 10px;\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n.sidebar button:hover {\n  border-radius: 5px;\n  background-color: var(--bgColor2);\n}\n.home > button.active {\n  border-radius: 0 5px 5px 0;\n  border-left: 5px solid var(--accent);\n  background-color: #2abd6770;\n}\n.home > button.active:hover {\n  filter: brightness(90%) !important;\n}\n\n.sidebar h2 {\n  border-bottom: 1px solid black;\n  padding-bottom: 5px;\n  padding-left: 5px;\n  font-weight: 600;\n}\n\n.hide {\n  top: 0;\n  left: 0;\n  pointer-events: none !important;\n  position: absolute !important;\n  max-height: 0 !important;\n  transition: max-height 1s ease-out !important;\n  opacity: 0 !important;\n}\n.content {\n  background-color: var(--main-green);\n  padding: 30px 50px;\n  flex: 1;\n  min-height: 100vh;\n  box-sizing: border-box;\n}\n\n@media (max-width: 930px) {\n  .container {\n    flex-direction: column;\n  }\n  .sidebar {\n    z-index: 3;\n    overflow: auto;\n    width: auto;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -531,6 +531,16 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/add.png":
+/*!****************************!*\
+  !*** ./src/assets/add.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "add.png";
+
+/***/ }),
+
 /***/ "./src/assets/hamburger.png":
 /*!**********************************!*\
   !*** ./src/assets/hamburger.png ***!
@@ -541,6 +551,26 @@ module.exports = __webpack_require__.p + "hamburger.png";
 
 /***/ }),
 
+/***/ "./src/assets/tasks.png":
+/*!******************************!*\
+  !*** ./src/assets/tasks.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "tasks.png";
+
+/***/ }),
+
+/***/ "./src/assets/today.png":
+/*!******************************!*\
+  !*** ./src/assets/today.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "today.png";
+
+/***/ }),
+
 /***/ "./src/assets/todo.png":
 /*!*****************************!*\
   !*** ./src/assets/todo.png ***!
@@ -548,6 +578,16 @@ module.exports = __webpack_require__.p + "hamburger.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "todo.png";
+
+/***/ }),
+
+/***/ "./src/assets/week.png":
+/*!*****************************!*\
+  !*** ./src/assets/week.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "week.png";
 
 /***/ })
 
@@ -666,6 +706,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _assets_hamburger_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hamburger.png */ "./src/assets/hamburger.png");
 /* harmony import */ var _assets_todo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/todo.png */ "./src/assets/todo.png");
+/* harmony import */ var _assets_tasks_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/tasks.png */ "./src/assets/tasks.png");
+/* harmony import */ var _assets_today_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/today.png */ "./src/assets/today.png");
+/* harmony import */ var _assets_week_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/week.png */ "./src/assets/week.png");
+/* harmony import */ var _assets_add_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/add.png */ "./src/assets/add.png");
+
+
+
+
 
 
 
@@ -674,4 +722,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlea554bf3a8bf34efa529c.js.map
+//# sourceMappingURL=bundle420df775740adc55c8f1.js.map
