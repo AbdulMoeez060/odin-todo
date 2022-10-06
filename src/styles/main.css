@@ -1,101 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    --main-green : #1ABC9C;
-    --second-green :#2ECC71;
-    --bgColor2: #ececec;
-    --bgColor3: #f2f3f5;
-    --bgColor1: #fefcfe;
-    --bgColorPopUp: #f3f1f3;
-    --textColor: #374958;
-    --accentDark: #2abd67;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  --main-green: #1abc9c;
+  --second-green: #2ecc71;
+  --bgColor2: #ececec;
+  --bgColor3: #f2f3f5;
+  --bgColor1: #fefcfe;
+  --bgColorPopUp: #f3f1f3;
+  --textColor: #374958;
+  --accentDark: #2abd67;
 }
-body{
-    height: 100%;
-}
-
-header{
-    position: relative;
-    height: 70px;
-    background-color: var(--bgColor3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid var(--accentDark);
-
-}
-.hamburger{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 6px;
-    left: 10px;
-    padding: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.hamburger:hover{
-    background-color: rgba(128, 128, 128, 0.267);
-
-}
-.hamburger:active{
-    transform: scale(0.9);
-}
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: 600;
-    gap: 8px;
-    cursor: pointer;
-
-}
-.logo >span{
-    color: var(--second-green);
+body {
+  height: 100%;
 }
 
-.container{
-    display: flex;
-    position: relative;
-    box-sizing: border-box;
-    height: 100%;
+header {
+  position: relative;
+  height: 70px;
+  background-color: var(--bgColor3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--accentDark);
 }
-.sidebar{
-    background-color: var(--accentDark);
-    box-sizing: border-box;
-    width: 350px;
-    user-select: none;
+.hamburger {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 6px;
+  left: 10px;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.hide{
-    top: 0;
-    left: 0;
-    pointer-events: none !important;
-    position: absolute !important;
-    max-height: 0 !important;
-    transition: max-height 1s ease-out !important;
-    opacity: 0 !important;
+.hamburger:hover {
+  background-color: rgba(128, 128, 128, 0.267);
 }
-.content{
-    background-color: var(--main-green);
-    padding: 30px 50px;
-    flex: 1;
-    min-height: 100vh;
-    box-sizing: border-box;
+.hamburger:active {
+  transform: scale(0.9);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+}
+.logo > span {
+  color: var(--second-green);
 }
 
-@media (max-width:930px){
-    
-    .container{
-        flex-direction: column;
-    }
-    .sidebar{
-        z-index: 3;
-        overflow:auto;
-        width:auto;
-    }
-    
+.container {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}
+.sidebar {
+  background-color: var(--accentDark);
+  box-sizing: border-box;
+  width: 350px;
+  user-select: none;
+}
+.hide {
+  top: 0;
+  left: 0;
+  pointer-events: none !important;
+  position: absolute !important;
+  max-height: 0 !important;
+  transition: max-height 1s ease-out !important;
+  opacity: 0 !important;
+}
+.content {
+  background-color: var(--main-green);
+  padding: 30px 50px;
+  flex: 1;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (max-width: 930px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    z-index: 3;
+    overflow: auto;
+    width: auto;
+  }
 }
