@@ -40,7 +40,8 @@ header {
 .hamburger:hover {
   background-color: rgba(128, 128, 128, 0.267);
 }
-.hamburger:active {
+.hamburger:active,
+button:active {
   transform: scale(0.9);
 }
 .logo {
@@ -91,7 +92,7 @@ header {
   border: none;
   background-color: transparent;
 }
-.sidebar button:hover {
+.sidebar button:hover,.project-form:hover {
   border-radius: 5px;
   background-color: var(--bgColor2);
 }
@@ -99,8 +100,9 @@ header {
   border-radius: 0 5px 5px 0;
   border-left: 5px solid var(--accent);
   background-color: #2abd6770;
+  pointer-events: none;
 }
-.home > button.active:hover {
+.home > button.active:hover,.project-form>.buttons>input:hover {
   filter: brightness(90%) !important;
 }
 
@@ -120,8 +122,45 @@ header {
   transition: max-height 1s ease-out !important;
   opacity: 0 !important;
 }
+
+.project-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  gap: 15px;
+}
+.project-form>input[type='text']{
+  width: 80%;
+  height: 30px;
+  border: black 2px solid;
+  border-radius: 2px;
+  padding-left: 5px;
+}
+.project-form>.buttons{
+  display: flex;
+  gap: 10px;
+}
+.project-form>.buttons>input{
+  border: none;
+  width: 70px;
+  color: white;
+  font-size: 16px;
+  height: 35px;
+  border-radius: 4px;
+}
+.project-form>.buttons>input[value='Add']{
+  background-color:var(--accentDark);
+}
+.project-form>.buttons>input[value='Cancel']{
+  background-color:rgb(235, 80, 80);
+}
+
 .content {
-  background-color: var(--main-green);
+  background-color: var(--bgColor2);
   padding: 30px 50px;
   flex: 1;
   min-height: 100vh;
