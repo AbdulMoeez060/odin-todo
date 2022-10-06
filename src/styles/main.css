@@ -37,11 +37,14 @@ header {
   border-radius: 4px;
   cursor: pointer;
 }
-.hamburger:hover {
+.hamburger:hover,
+.project-item > img:hover {
   background-color: rgba(128, 128, 128, 0.267);
 }
 .hamburger:active,
-button:active {
+button:active,
+.project-item > img:active,
+.project-form > .buttons > input:active {
   transform: scale(0.9);
 }
 .logo {
@@ -80,7 +83,8 @@ button:active {
   flex-direction: column;
   gap: 10px;
 }
-.sidebar button {
+.sidebar button,
+.project-item {
   display: flex;
   justify-content: start;
   height: 40px;
@@ -92,7 +96,9 @@ button:active {
   border: none;
   background-color: transparent;
 }
-.sidebar button:hover,.project-form:hover {
+.sidebar button:hover,
+.project-form:hover,
+.project-item:hover {
   border-radius: 5px;
   background-color: var(--bgColor2);
 }
@@ -102,7 +108,8 @@ button:active {
   background-color: #2abd6770;
   pointer-events: none;
 }
-.home > button.active:hover,.project-form>.buttons>input:hover {
+.home > button.active:hover,
+.project-form > .buttons > input:hover {
   filter: brightness(90%) !important;
 }
 
@@ -123,7 +130,16 @@ button:active {
   opacity: 0 !important;
 }
 
-.project-form{
+.project-item {
+  justify-content: space-between;
+}
+.project-item > img {
+  padding: 3px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.project-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,18 +149,18 @@ button:active {
 
   gap: 15px;
 }
-.project-form>input[type='text']{
+.project-form > input[type="text"] {
   width: 80%;
   height: 30px;
   border: black 2px solid;
   border-radius: 2px;
   padding-left: 5px;
 }
-.project-form>.buttons{
+.project-form > .buttons {
   display: flex;
   gap: 10px;
 }
-.project-form>.buttons>input{
+.project-form > .buttons > input {
   border: none;
   width: 70px;
   color: white;
@@ -152,11 +168,11 @@ button:active {
   height: 35px;
   border-radius: 4px;
 }
-.project-form>.buttons>input[value='Add']{
-  background-color:var(--accentDark);
+.project-form > .buttons > input[value="Add"] {
+  background-color: var(--accentDark);
 }
-.project-form>.buttons>input[value='Cancel']{
-  background-color:rgb(235, 80, 80);
+.project-form > .buttons > input[value="Cancel"] {
+  background-color: rgb(235, 80, 80);
 }
 
 .content {
