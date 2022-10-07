@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-  <script defer src="bundlea780445ca33a8d213ff9.js"></script></head>
+  <script defer src="bundle751d34e56b410a46e713.js"></script></head>
   <body>
     <header>
       <div class="hamburger">
@@ -40,18 +40,48 @@
             <img src="add.png" alt="" width="27px" /> Add Project
           </button>
           <div class="project-form hide">
-            <input type="text" placeholder="Enter Project Name" />
-            <div class="buttons">
-              <input type="button" class="project-add" value="Add" />
-              <input type="button" class="cancel-project" value="Cancel" />
+            <form onsubmit="event.preventDefault();">
+
+              <input class="project-name-inp" type="text" placeholder="Enter Project Name" required/>
+              <div class="buttons">
+                <input type="submit" class="project-add" value="Add" />
+                <input type="button" class="cancel-project" value="Cancel" />
+              </div>
             </div>
-          </div>
+            </form>
         </div>
       </div>
       <div class="content">
         <div class="name">All Tasks</div>
         <div class="todos">
-          
+          <div class="todo-item">
+            <div class="left">
+              <div class="unchecked checked"></div>
+              <div class="text item-checked">
+                <p>Yolo</p>
+                <p>desc</p>
+              </div>
+            </div>
+            <div class="right">
+              <p class="date">28-10-22</p>
+              <img src="del.png">
+            </div>
+
+          </div>
+          <div class="todo-item">
+            <div class="left">
+              <div class="unchecked"></div>
+              <div class="text">
+                <p>Yolo</p>
+                <p>desc</p>
+              </div>
+            </div>
+            <div class="right">
+              <p class="date">28-10-22</p>
+              <img src="del.png">
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
