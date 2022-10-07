@@ -40,13 +40,15 @@ header {
   cursor: pointer;
 }
 .hamburger:hover,
-.project-item > img:hover {
+.project-item > img:hover,
+.right img:hover{
   background-color: rgba(128, 128, 128, 0.267);
 }
 .hamburger:active,
 button:active,
 .project-item  img:active,
-.project-form  .buttons > input:active {
+.project-form  .buttons > input:active,
+.right img:active{
   transform: scale(0.9);
 }
 .logo {
@@ -139,7 +141,7 @@ button:active,
 .project-item {
   justify-content: space-between;
 }
-.project-item > img {
+.project-item > img,.right img {
   padding: 3px;
   border-radius: 4px;
   margin-right: 5px;
@@ -190,6 +192,7 @@ button:active,
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 .name{
   background-color: var(--accent);
@@ -200,6 +203,81 @@ button:active,
     border-radius: 3px;
     margin-bottom: 10px;
 }
+.todos{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--textColor);
+  padding: 5px;
+  border-radius: 10px;
+}
+.todo-item:hover{
+  background-color: var(--bgColor1);
+}
+.todo-item:active{
+  transform: scale(0.995);
+
+}
+
+.left{
+  display: flex;
+  flex: 3;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--textColor);
+  font-size: 17px;
+  font-weight: 500;
+}
+.left .text p:nth-child(2){
+  font-size: 15px;
+}
+
+.item-checked {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.right{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-right: 15px;
+}
+
+
+.date {
+  font-size: 0.9rem;
+  padding: 3px 6px;
+  margin: 6px 5px;
+  border: solid 1.5px var(--textColor);
+  border-radius: 10px;
+}
+.unchecked {
+  width: 13px;
+  height: 13px;
+  border: solid 2px var(--textColor);
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+.checked {
+  background-image: url(../assets/checkmark.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-color: white;
+  border-color: var(--accent);
+}
+
+
 @media (max-width: 930px) {
   .container {
     flex-direction: column;
