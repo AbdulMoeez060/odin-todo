@@ -40,12 +40,15 @@
             <img src="add.png" alt="" width="27px" /> Add Project
           </button>
           <div class="project-form hide">
-            <input type="text" placeholder="Enter Project Name" />
-            <div class="buttons">
-              <input type="button" class="project-add" value="Add" />
-              <input type="button" class="cancel-project" value="Cancel" />
+            <form onsubmit="event.preventDefault();">
+
+              <input type="text" placeholder="Enter Project Name" />
+              <div class="buttons">
+                <input type="submit" class="project-add" value="Add" />
+                <input type="button" class="cancel-project" value="Cancel" />
+              </div>
             </div>
-          </div>
+            </form>
         </div>
       </div>
       <div class="content">
