@@ -48,7 +48,7 @@ header {
 button:active,
 .project-item  img:active,
 .project-form  .buttons > input:active,
-.right img:active{
+.right img:active,.todo-form .buttons > input:active{
   transform: scale(0.95);
 }
 .logo {
@@ -113,7 +113,7 @@ button:active,
   background-color: #2abd6770;
 }
 .home > button.active:hover,
-.project-form  .buttons > input:hover {
+.project-form  .buttons > input:hover,.todo-form .buttons > input:hover {
   filter: brightness(90%) !important;
 }
 
@@ -165,11 +165,12 @@ button:active,
   border-radius: 2px;
   padding-left: 5px;
 }
-.project-form  .buttons {
+.project-form  .buttons,.todo-form .buttons {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
-.project-form  .buttons > input {
+.project-form  .buttons > input,.todo-form .buttons > input {
   border: none;
   width: 70px;
   color: white;
@@ -177,10 +178,10 @@ button:active,
   height: 35px;
   border-radius: 4px;
 }
-.project-form  .buttons > input[value="Add"] {
+.project-form  .buttons > input[value="Add"],.todo-form .buttons > input[value="Add"] {
   background-color: var(--accentDark);
 }
-.project-form  .buttons > input[value="Cancel"] {
+.project-form  .buttons > input[value="Cancel"],.todo-form .buttons > input[value="Cancel"] {
   background-color: rgb(235, 80, 80);
 }
 
@@ -276,6 +277,37 @@ button:active,
   background-origin: border-box;
   background-color: white;
   border-color: var(--accent);
+}
+.todo-form{
+  background-color: var(--bgColor1);
+  color: var(--textColor);
+  border-radius: 10px;
+}
+
+.todo-form > form{
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  position: relative;
+  transition-delay: 1s;
+  max-height: 500px;
+  transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+}
+
+.todo-form input[type=text], textarea, input[type=date] {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: white;
+  border: solid 2px #273746;
+  border-radius: 3px;
+  padding: 5px;
+  resize: none;
+}
+.todo-form .buttons{
+  margin-top: 10px;
 }
 
 
