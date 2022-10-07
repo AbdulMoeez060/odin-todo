@@ -28,7 +28,6 @@ header {
   align-items: center;
   border-bottom: 2px solid var(--accentDark);
   user-select: none;
-
 }
 
 .hamburger {
@@ -44,7 +43,7 @@ header {
 }
 
 .hamburger:hover,
-.project-item>img:hover,
+.project-item > img:hover,
 .right img:hover {
   background-color: rgba(128, 128, 128, 0.267);
 }
@@ -52,8 +51,9 @@ header {
 .hamburger:active,
 button:active,
 .project-item img:active,
-.project-form .buttons>input:active,
-.right img:active, .todo-form .buttons>input:active {
+.project-form .buttons > input:active,
+.right img:active,
+.todo-form .buttons > input:active {
   transform: scale(0.95);
 }
 
@@ -67,7 +67,7 @@ button:active,
   cursor: pointer;
 }
 
-.logo>span {
+.logo > span {
   color: var(--second-green);
 }
 
@@ -115,20 +115,20 @@ button:active,
 .sidebar button:hover,
 .project-form:hover,
 .project-item:hover,
-.content .add-todo:hover{
+.content .add-todo:hover {
   border-radius: 5px;
   background-color: var(--bgColor2);
 }
 
-
-.home>button.active {
+.home > button.active {
   border-radius: 0 5px 5px 0;
   border-left: 5px solid var(--accent);
   background-color: #2abd6770;
 }
 
-.home>button.active:hover,
-.project-form .buttons>input:hover, .todo-form .buttons>input:hover {
+.home > button.active:hover,
+.project-form .buttons > input:hover,
+.todo-form .buttons > input:hover {
   filter: brightness(90%) !important;
 }
 
@@ -156,12 +156,12 @@ button:active,
   justify-content: space-between;
 }
 
-.project-item>img, .right img {
+.project-item > img,
+.right img {
   padding: 3px;
   border-radius: 4px;
   margin-right: 5px;
 }
-
 
 .project-form form {
   display: flex;
@@ -170,7 +170,7 @@ button:active,
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   gap: 15px;
 }
 
@@ -182,13 +182,15 @@ button:active,
   padding-left: 5px;
 }
 
-.project-form .buttons, .todo-form .buttons {
+.project-form .buttons,
+.todo-form .buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
 
-.project-form .buttons>input, .todo-form .buttons>input {
+.project-form .buttons > input,
+.todo-form .buttons > input {
   border: none;
   width: 70px;
   color: white;
@@ -197,11 +199,13 @@ button:active,
   border-radius: 4px;
 }
 
-.project-form .buttons>input[value="Add"], .todo-form .buttons>input[value="Add"] {
+.project-form .buttons > input[value="Add"],
+.todo-form .buttons > input[value="Add"] {
   background-color: var(--accentDark);
 }
 
-.project-form .buttons>input[value="Cancel"], .todo-form .buttons>input[value="Cancel"] {
+.project-form .buttons > input[value="Cancel"],
+.todo-form .buttons > input[value="Cancel"] {
   background-color: rgb(235, 80, 80);
 }
 
@@ -246,9 +250,9 @@ button:active,
   background-color: var(--bgColor1);
 }
 
-.todo-item:active, .content .add-todo:active {
+.todo-item:active,
+.content .add-todo:active {
   transform: scale(0.995);
-
 }
 
 .left {
@@ -278,7 +282,6 @@ button:active,
   gap: 20px;
   padding-right: 15px;
 }
-
 
 .date {
   font-size: 0.9rem;
@@ -313,7 +316,7 @@ button:active,
   border-radius: 10px;
 }
 
-.todo-form>form {
+.todo-form > form {
   display: flex;
   flex-direction: column;
   pointer-events: auto;
@@ -325,7 +328,9 @@ button:active,
   font-size: 1.2rem;
 }
 
-.todo-form input[type=text], textarea, input[type=date] {
+.todo-form input[type="text"],
+textarea,
+input[type="date"] {
   width: 100%;
   box-sizing: border-box;
   font-size: 1rem;
@@ -340,7 +345,7 @@ button:active,
   margin-top: 10px;
 }
 
-.content .add-todo:hover{
+.content .add-todo:hover {
   background-color: var(--bgColor1);
 }
 @media (max-width: 930px) {
