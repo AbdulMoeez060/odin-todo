@@ -75,7 +75,7 @@ button:active,
   flex-direction: column;
   padding: 20px;
   gap: 15px;
-  transition: 1.5s ease-out;
+  transition: 1.5s ease-in;
 }
 
 .home,

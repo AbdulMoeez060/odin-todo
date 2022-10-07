@@ -36,13 +36,16 @@ const displayController = (()=>{
         var btns = document.querySelectorAll('.btn')
         btns.forEach(btn=> btn.classList.remove('active'));
         e.target.classList.add('active');
+        var heading = document.querySelector('.name');
         if (e.target.classList.contains('all-tasks')) {
-            
+            heading.innerText = 'All Tasks'
         }
         else if (e.target.classList.contains('today')) {
+            heading.innerText = "Today's Tasks"
             
         }
-        else if (e.target.classList.contains('today')) {
+        else if (e.target.classList.contains('week')) {
+            heading.innerText = "This Week's Tasks"
             
         }
     }
