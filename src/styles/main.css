@@ -107,7 +107,6 @@ button:active,
   border-radius: 0 5px 5px 0;
   border-left: 5px solid var(--accent);
   background-color: #2abd6770;
-  pointer-events: none;
 }
 .home > button.active:hover,
 .project-form > .buttons > input:hover {

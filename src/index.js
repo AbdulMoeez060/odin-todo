@@ -17,15 +17,34 @@ const displayController = (()=>{
         var addProjectButton = document.querySelector('.add-project');
         var projectForm = document.querySelector('.project-form');
 
+        var tasksButtons = document.querySelectorAll('.btn')
+
         menu.addEventListener('click',clickMenu);
         addProjectButton.addEventListener('click',toggleProjectForm);
         projectForm.addEventListener('click',toggleProjectForm);
+
+        tasksButtons.forEach(btn => btn.addEventListener('click',changeTaskTab));
     }
 
 
     function clickMenu(){
         var sidebar = document.querySelector('.sidebar')
         sidebar.classList.toggle('hide');
+    }
+
+    function changeTaskTab(e){
+        var btns = document.querySelectorAll('.btn')
+        btns.forEach(btn=> btn.classList.remove('active'));
+        e.target.classList.add('active');
+        if (e.target.classList.contains('all-tasks')) {
+            
+        }
+        else if (e.target.classList.contains('today')) {
+            
+        }
+        else if (e.target.classList.contains('today')) {
+            
+        }
     }
 
     function toggleProjectForm(e){
