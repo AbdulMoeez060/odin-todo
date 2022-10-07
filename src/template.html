@@ -42,7 +42,7 @@
           <div class="project-form hide">
             <form onsubmit="event.preventDefault();">
 
-              <input type="text" placeholder="Enter Project Name" />
+              <input class="project-name-inp" type="text" placeholder="Enter Project Name" required/>
               <div class="buttons">
                 <input type="submit" class="project-add" value="Add" />
                 <input type="button" class="cancel-project" value="Cancel" />
@@ -54,7 +54,17 @@
       <div class="content">
         <div class="name">All Tasks</div>
         <div class="todos">
-          
+          <div class="todo-item">
+            <div class="text">
+              <p>Yolo</p>
+              <p>desc</p>
+            </div>
+            <div>
+              <p class="date">28-10-22</p>
+              <img src="del.png">
+            </div>
+
+          </div>
         </div>
       </div>
     </div>

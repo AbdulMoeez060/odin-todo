@@ -60,6 +60,8 @@ const displayController = (()=>{
             var form = document.querySelector('.project-form');
 
             form.classList.add('hide');
+            var input = document.querySelector('.project-name-inp');
+            input.value = '';
             var projectButton = document.querySelector('.add-project');
 
             projectButton.classList.remove('hide')
