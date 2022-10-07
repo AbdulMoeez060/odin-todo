@@ -49,7 +49,7 @@ button:active,
 .project-item  img:active,
 .project-form  .buttons > input:active,
 .right img:active{
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 .logo {
   display: flex;
@@ -207,6 +207,7 @@ button:active,
   display: flex;
   flex-direction: column;
   gap: 20px;
+  cursor: pointer;
 }
 
 .todo-item{
