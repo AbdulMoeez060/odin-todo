@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,7 @@
   --accentDark: #1f8d4d;
   --accent: #2abd67;
 }
+
 body {
   height: 100%;
 }
@@ -28,6 +30,7 @@ header {
   user-select: none;
 
 }
+
 .hamburger {
   position: absolute;
   display: flex;
@@ -39,18 +42,21 @@ header {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .hamburger:hover,
-.project-item > img:hover,
-.right img:hover{
+.project-item>img:hover,
+.right img:hover {
   background-color: rgba(128, 128, 128, 0.267);
 }
+
 .hamburger:active,
 button:active,
-.project-item  img:active,
-.project-form  .buttons > input:active,
-.right img:active,.todo-form .buttons > input:active{
+.project-item img:active,
+.project-form .buttons>input:active,
+.right img:active, .todo-form .buttons>input:active {
   transform: scale(0.95);
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -60,7 +66,8 @@ button:active,
   gap: 8px;
   cursor: pointer;
 }
-.logo > span {
+
+.logo>span {
   color: var(--second-green);
 }
 
@@ -70,6 +77,7 @@ button:active,
   box-sizing: border-box;
   height: 100%;
 }
+
 .sidebar {
   background-color: var(--bgColor1);
   box-sizing: border-box;
@@ -79,7 +87,7 @@ button:active,
   flex-direction: column;
   padding: 20px;
   gap: 15px;
-  transition: 1s  ease-out;
+  transition: 1s ease-out;
 }
 
 .home,
@@ -88,8 +96,10 @@ button:active,
   flex-direction: column;
   gap: 10px;
 }
+
 .sidebar button,
-.project-item {
+.project-item,
+.content .add-todo {
   display: flex;
   justify-content: start;
   height: 40px;
@@ -101,19 +111,24 @@ button:active,
   border: none;
   background-color: transparent;
 }
+
 .sidebar button:hover,
 .project-form:hover,
-.project-item:hover {
+.project-item:hover,
+.content .add-todo:hover{
   border-radius: 5px;
   background-color: var(--bgColor2);
 }
-.home > button.active {
+
+
+.home>button.active {
   border-radius: 0 5px 5px 0;
   border-left: 5px solid var(--accent);
   background-color: #2abd6770;
 }
-.home > button.active:hover,
-.project-form  .buttons > input:hover,.todo-form .buttons > input:hover {
+
+.home>button.active:hover,
+.project-form .buttons>input:hover, .todo-form .buttons>input:hover {
   filter: brightness(90%) !important;
 }
 
@@ -134,14 +149,15 @@ button:active,
   opacity: 0 !important;
 }
 
-.add-project{
+.add-project {
   transition: 1s ease-out;
 }
 
 .project-item {
   justify-content: space-between;
 }
-.project-item > img,.right img {
+
+.project-item>img, .right img {
   padding: 3px;
   border-radius: 4px;
   margin-right: 5px;
@@ -158,19 +174,22 @@ button:active,
   transition: .5s ease-in-out;
   gap: 15px;
 }
-.project-form  input[type="text"] {
+
+.project-form input[type="text"] {
   width: 80%;
   height: 30px;
   border: black 2px solid;
   border-radius: 2px;
   padding-left: 5px;
 }
-.project-form  .buttons,.todo-form .buttons {
+
+.project-form .buttons, .todo-form .buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.project-form  .buttons > input,.todo-form .buttons > input {
+
+.project-form .buttons>input, .todo-form .buttons>input {
   border: none;
   width: 70px;
   color: white;
@@ -178,10 +197,12 @@ button:active,
   height: 35px;
   border-radius: 4px;
 }
-.project-form  .buttons > input[value="Add"],.todo-form .buttons > input[value="Add"] {
+
+.project-form .buttons>input[value="Add"], .todo-form .buttons>input[value="Add"] {
   background-color: var(--accentDark);
 }
-.project-form  .buttons > input[value="Cancel"],.todo-form .buttons > input[value="Cancel"] {
+
+.project-form .buttons>input[value="Cancel"], .todo-form .buttons>input[value="Cancel"] {
   background-color: rgb(235, 80, 80);
 }
 
@@ -195,23 +216,25 @@ button:active,
   flex-direction: column;
   gap: 20px;
 }
-.name{
+
+.name {
   background-color: var(--accent);
-    height: 60px;
-    padding: 20px;
-    font-size: 2rem;
-    color: #f7f5f5;
-    border-radius: 3px;
-    margin-bottom: 10px;
+  height: 60px;
+  padding: 20px;
+  font-size: 2rem;
+  color: #f7f5f5;
+  border-radius: 3px;
+  margin-bottom: 10px;
 }
-.todos{
+
+.todos {
   display: flex;
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
 }
 
-.todo-item{
+.todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -219,15 +242,17 @@ button:active,
   padding: 5px;
   border-radius: 10px;
 }
-.todo-item:hover{
+
+.todo-item:hover {
   background-color: var(--bgColor1);
 }
-.todo-item:active{
+
+.todo-item:active, .content .add-todo:active {
   transform: scale(0.995);
 
 }
 
-.left{
+.left {
   display: flex;
   flex: 3;
   gap: 10px;
@@ -236,7 +261,8 @@ button:active,
   font-size: 17px;
   font-weight: 500;
 }
-.left .text p:nth-child(2){
+
+.left .text p:nth-child(2) {
   font-size: 15px;
 }
 
@@ -244,7 +270,8 @@ button:active,
   text-decoration: line-through;
   opacity: 0.7;
 }
-.right{
+
+.right {
   display: flex;
   flex: 1;
   justify-content: flex-end;
@@ -261,6 +288,7 @@ button:active,
   border: solid 1.5px var(--textColor);
   border-radius: 10px;
 }
+
 .unchecked {
   width: 13px;
   height: 13px;
@@ -270,6 +298,7 @@ button:active,
   margin-top: 10px;
   flex-shrink: 0;
 }
+
 .checked {
   background-image: url(../assets/checkmark.png);
   background-size: 100%;
@@ -278,13 +307,14 @@ button:active,
   background-color: white;
   border-color: var(--accent);
 }
-.todo-form{
+
+.todo-form {
   background-color: var(--bgColor1);
   color: var(--textColor);
   border-radius: 10px;
 }
 
-.todo-form > form{
+.todo-form>form {
   display: flex;
   flex-direction: column;
   pointer-events: auto;
@@ -306,15 +336,19 @@ button:active,
   padding: 5px;
   resize: none;
 }
-.todo-form .buttons{
+
+.todo-form .buttons {
   margin-top: 10px;
 }
 
-
+.content .add-todo:hover{
+  background-color: var(--bgColor1);
+}
 @media (max-width: 930px) {
   .container {
     flex-direction: column;
   }
+
   .sidebar {
     z-index: 3;
     overflow: auto;
