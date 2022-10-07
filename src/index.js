@@ -15,13 +15,21 @@ const displayController = (()=>{
     function addEvents() {
         var menu = document.querySelector('.hamburger');
         var addProjectButton = document.querySelector('.add-project');
-        var projectForm = document.querySelector('.project-form');
+        var cancelProject = document.querySelector('.cancel-project');
 
-        var tasksButtons = document.querySelectorAll('.btn')
+        var tasksButtons = document.querySelectorAll('.btn');
+
+        var addTodoButton = document.querySelector('.add-todo');
+        var cancelTodo = document.querySelector('.cancel-todo');
+
 
         menu.addEventListener('click',clickMenu);
         addProjectButton.addEventListener('click',toggleProjectForm);
-        projectForm.addEventListener('click',toggleProjectForm);
+        cancelProject.addEventListener('click',toggleProjectForm);
+
+        addTodoButton.addEventListener('click',toggleTodoForm)
+        cancelTodo.addEventListener('click',toggleTodoForm)
+
 
         tasksButtons.forEach(btn => btn.addEventListener('click',changeTaskTab));
     }
@@ -65,6 +73,23 @@ const displayController = (()=>{
             var projectButton = document.querySelector('.add-project');
 
             projectButton.classList.remove('hide')
+        }
+    }
+
+    function toggleTodoForm(e){
+        if (e.target.classList.contains('add-todo')) {
+            e.target.classList.add('hide');
+            var form = document.querySelector('.todo-form');
+            form.classList.remove('hide')
+        }
+        else if (e.target.classList.contains('cancel-todo')) {
+            var form = document.querySelector('.todo-form');
+
+            form.classList.add('hide');
+            
+            var todoButton = document.querySelector('.add-todo');
+
+            todoButton.classList.remove('hide')
         }
     }
 })()

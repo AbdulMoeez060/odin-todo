@@ -140,8 +140,7 @@ button:active,
 }
 
 .hide {
-  top: 0;
-  left: 0;
+  display: none;
   pointer-events: none !important;
   position: absolute !important;
   max-height: 0 !important;
