@@ -35,7 +35,7 @@ export default class Todo{
         left.appendChild(box);
         left.appendChild(texts);
 
-        mainDiv.appendChild('left');
+        mainDiv.appendChild(left);
 
         var right = document.createElement('div');
         right.classList.add('right');

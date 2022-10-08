@@ -4,6 +4,7 @@ import { displayController } from "..";
 
 const projectController = (()=>{
     var projects = [];
+    var allTasks = [];
 
     function addProject(e){
         e.preventDefault();
@@ -47,7 +48,7 @@ const projectController = (()=>{
                 project.addTodo(todo);
             }
         })
-        console.log(projects)
+        allTasks.push(todo);
 
         form[0].value = '';
         form[1].value = '';
@@ -55,6 +56,10 @@ const projectController = (()=>{
         form.parentNode.classList.add('hide');
 
         addTodoButton.classList.remove('hide');
+
+        var task = todo.addDomElements();
+        var todoList = document.querySelector('.todos');
+        todoList.appendChild(task);
 
     }
 
