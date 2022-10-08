@@ -882,8 +882,14 @@ const projectController = (()=>{
                 project.todos.splice(todoItem,1);
             }
         })
+        var page = document.querySelector('.name').textContent;
+        if (page === 'All Tasks') {
+            showAllTasks()
+        }
+        else{
 
-        showProjects(projectName);
+            showProjects(projectName);
+        }
         
 
 
@@ -1229,4 +1235,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundle7811aeb3407599cbc1ca.js.map
+//# sourceMappingURL=bundlef1df41e6e2dec41d5028.js.map
