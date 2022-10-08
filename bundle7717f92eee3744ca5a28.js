@@ -27,7 +27,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Poppins\", sans-serif;\n  --main-green: #1abc9c;\n  --second-green: #2ecc71;\n  --bgColor2: #ececec;\n  --bgColor3: #f2f3f5;\n  --bgColor1: #fefcfe;\n  --bgColorPopUp: #f3f1f3;\n  --textColor: #374958;\n  --accentDark: #1f8d4d;\n  --accent: #2abd67;\n}\n\nbody {\n  height: 100%;\n}\n\nheader {\n  position: relative;\n  height: 70px;\n  background-color: var(--bgColor3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: 2px solid var(--accentDark);\n  user-select: none;\n}\n\n.hamburger {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 6px;\n  left: 10px;\n  padding: 4px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n\n.hamburger:hover,\n.project-item > img:hover,\n.right img:hover {\n  background-color: rgba(128, 128, 128, 0.267);\n}\n\n.hamburger:active,\nbutton:active,\n.project-item img:active,\n.project-form .buttons > input:active,\n.right img:active,\n.todo-form .buttons > input:active {\n  transform: scale(0.95);\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 30px;\n  font-weight: 600;\n  gap: 8px;\n  cursor: pointer;\n}\n\n.logo > span {\n  color: var(--second-green);\n}\n\n.container {\n  display: flex;\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n}\n\n.sidebar {\n  background-color: var(--bgColor1);\n  box-sizing: border-box;\n  width: 350px;\n  user-select: none;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  gap: 15px;\n  transition: 1s ease-out;\n}\n\n.home,\n.projects {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.sidebar button,\n.project-item,\n.content .add-todo {\n  display: flex;\n  justify-content: start;\n  height: 40px;\n  gap: 15px;\n  align-items: center;\n  font-size: 18px;\n  padding-left: 10px;\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n\n.sidebar button:hover,\n.project-form:hover,\n.project-item:hover,\n.content .add-todo:hover {\n  border-radius: 5px;\n  background-color: var(--bgColor2);\n}\n\n.home > button.active {\n  border-radius: 0 5px 5px 0;\n  border-left: 5px solid var(--accent);\n  background-color: #2abd6770;\n}\n\n.home > button.active:hover,\n.project-form .buttons > input:hover,\n.todo-form .buttons > input:hover {\n  filter: brightness(90%) !important;\n}\n\n.sidebar h2 {\n  border-bottom: 1px solid black;\n  padding-bottom: 5px;\n  padding-left: 5px;\n  font-weight: 600;\n}\n\n.hide {\n  display: none;\n  pointer-events: none !important;\n  position: absolute !important;\n  max-height: 0 !important;\n  transition: max-height 1s ease-out !important;\n  opacity: 0 !important;\n}\n\n.add-project {\n  transition: 1s ease-out;\n}\n\n.project-item {\n  justify-content: space-between;\n}\n\n.project-item > img,\n.right img {\n  padding: 3px;\n  border-radius: 4px;\n  margin-right: 5px;\n}\n\n.project-form form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  transition: 0.5s ease-in-out;\n  gap: 15px;\n}\n\n.project-form input[type=\"text\"] {\n  width: 80%;\n  height: 30px;\n  border: black 2px solid;\n  border-radius: 2px;\n  padding-left: 5px;\n}\n\n.project-form .buttons,\n.todo-form .buttons {\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n\n.project-form .buttons > input,\n.todo-form .buttons > input {\n  border: none;\n  width: 70px;\n  color: white;\n  font-size: 16px;\n  height: 35px;\n  border-radius: 4px;\n}\n\n.project-form .buttons > input[value=\"Add\"],\n.todo-form .buttons > input[value=\"Add\"] {\n  background-color: var(--accentDark);\n}\n\n.project-form .buttons > input[value=\"Cancel\"],\n.todo-form .buttons > input[value=\"Cancel\"] {\n  background-color: rgb(235, 80, 80);\n}\n\n.content {\n  background-color: var(--bgColor2);\n  padding: 30px 50px;\n  flex: 1;\n  min-height: 100vh;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.name {\n  background-color: var(--accent);\n  height: 60px;\n  padding: 20px;\n  font-size: 2rem;\n  color: #f7f5f5;\n  border-radius: 3px;\n  margin-bottom: 10px;\n}\n\n.todos {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  cursor: pointer;\n}\n\n.todo-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 2px solid var(--textColor);\n  padding: 5px;\n  border-radius: 10px;\n}\n\n.todo-item:hover {\n  background-color: var(--bgColor1);\n}\n\n.todo-item:active,\n.content .add-todo:active {\n  transform: scale(0.995);\n}\n\n.left {\n  display: flex;\n  flex: 3;\n  gap: 10px;\n  flex-wrap: wrap;\n  color: var(--textColor);\n  font-size: 17px;\n  font-weight: 500;\n}\n\n.left .text p:nth-child(2) {\n  font-size: 15px;\n}\n\n.item-checked {\n  text-decoration: line-through;\n  opacity: 0.7;\n}\n\n.right {\n  display: flex;\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n  gap: 20px;\n  padding-right: 15px;\n}\n\n.date {\n  font-size: 0.9rem;\n  padding: 3px 6px;\n  margin: 6px 5px;\n  border: solid 1.5px var(--textColor);\n  border-radius: 10px;\n}\n\n.unchecked {\n  width: 13px;\n  height: 13px;\n  border: solid 2px var(--textColor);\n  border-radius: 50%;\n  margin-right: 8px;\n  margin-top: 10px;\n  flex-shrink: 0;\n}\n\n.checked {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-origin: border-box;\n  background-color: white;\n  border-color: var(--accent);\n}\n\n.todo-form {\n  background-color: var(--bgColor1);\n  color: var(--textColor);\n  border-radius: 10px;\n}\n\n.todo-form > form {\n  display: flex;\n  flex-direction: column;\n  pointer-events: auto;\n  position: relative;\n  transition-delay: 1s;\n  max-height: 500px;\n  transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;\n  padding: 15px 20px;\n  font-size: 1.2rem;\n}\n\n.todo-form input[type=\"text\"],\ntextarea,\ninput[type=\"date\"] {\n  width: 100%;\n  box-sizing: border-box;\n  font-size: 1rem;\n  background-color: white;\n  border: solid 2px #273746;\n  border-radius: 3px;\n  padding: 5px;\n  resize: none;\n}\n\n.todo-form .buttons {\n  margin-top: 10px;\n}\n\n.content .add-todo:hover {\n  background-color: var(--bgColor1);\n}\n@media (max-width: 930px) {\n  .container {\n    flex-direction: column;\n  }\n\n  .sidebar {\n    z-index: 3;\n    overflow: auto;\n    width: auto;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap\");\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Poppins\", sans-serif;\n  --main-green: #1abc9c;\n  --second-green: #2ecc71;\n  --bgColor2: #ececec;\n  --bgColor3: #f2f3f5;\n  --bgColor1: #fefcfe;\n  --bgColorPopUp: #f3f1f3;\n  --textColor: #374958;\n  --accentDark: #1f8d4d;\n  --accent: #2abd67;\n}\n\nbody {\n  height: 100%;\n}\n\nheader {\n  position: relative;\n  height: 70px;\n  background-color: var(--bgColor3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: 2px solid var(--accentDark);\n  user-select: none;\n}\n\n.hamburger {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 6px;\n  left: 10px;\n  padding: 4px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n\n.hamburger:hover,\n.project-item > img:hover,\n.right img:hover {\n  background-color: rgba(128, 128, 128, 0.267);\n}\n\n.hamburger:active,\nbutton:active,\n.project-item img:active,\n.project-form .buttons > input:active,\n.right img:active,\n.todo-form .buttons > input:active {\n  transform: scale(0.95);\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 30px;\n  font-weight: 600;\n  gap: 8px;\n  cursor: pointer;\n}\n\n.logo > span {\n  color: var(--second-green);\n}\n\n.container {\n  display: flex;\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n}\n\n.sidebar {\n  background-color: var(--bgColor1);\n  box-sizing: border-box;\n  width: 350px;\n  user-select: none;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  gap: 15px;\n  transition: 1s ease-out;\n}\n\n.home,\n.projects {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.sidebar button,\n.project-item,\n.content .add-todo {\n  display: flex;\n  justify-content: start;\n  height: 40px;\n  gap: 15px;\n  align-items: center;\n  font-size: 18px;\n  padding-left: 10px;\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n\n.sidebar button:hover,\n.project-form:hover,\n.project-item:hover,\n.content .add-todo:hover {\n  border-radius: 5px;\n  background-color: var(--bgColor2);\n}\n\n.home > button.active {\n  border-radius: 0 5px 5px 0;\n  border-left: 5px solid var(--accent);\n  background-color: #2abd6770;\n}\n\n.home > button.active:hover,\n.project-form .buttons > input:hover,\n.todo-form .buttons > input:hover {\n  filter: brightness(90%) !important;\n}\n\n.sidebar h2 {\n  border-bottom: 1px solid black;\n  padding-bottom: 5px;\n  padding-left: 5px;\n  font-weight: 600;\n}\n\n.hide {\n  display: none;\n  pointer-events: none !important;\n  position: absolute !important;\n  max-height: 0 !important;\n  transition: max-height 1s ease-out !important;\n  opacity: 0 !important;\n}\n\n.add-project {\n  transition: 1s ease-out;\n}\n\n.project-item {\n  justify-content: space-between;\n}\n\n.project-item > img,\n.right img {\n  padding: 3px;\n  border-radius: 4px;\n  margin-right: 5px;\n}\n\n.project-form form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  transition: 0.5s ease-in-out;\n  gap: 15px;\n}\n\n.project-form input[type=\"text\"] {\n  width: 80%;\n  height: 30px;\n  border: black 2px solid;\n  border-radius: 2px;\n  padding-left: 5px;\n}\n\n.project-form .buttons,\n.todo-form .buttons {\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n\n.project-form .buttons > input,\n.todo-form .buttons > input {\n  border: none;\n  width: 70px;\n  color: white;\n  font-size: 16px;\n  height: 35px;\n  border-radius: 4px;\n}\n\n.project-form .buttons > input[value=\"Add\"],\n.todo-form .buttons > input[value=\"Add\"] {\n  background-color: var(--accentDark);\n}\n\n.project-form .buttons > input[value=\"Cancel\"],\n.todo-form .buttons > input[value=\"Cancel\"] {\n  background-color: rgb(235, 80, 80);\n}\n\n.content {\n  background-color: var(--bgColor2);\n  padding: 30px 50px;\n  flex: 1;\n  min-height: 100vh;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.name {\n  background-color: var(--accent);\n  height: 60px;\n  padding: 20px;\n  font-size: 2rem;\n  color: #f7f5f5;\n  border-radius: 3px;\n  margin-bottom: 10px;\n}\n\n.todos {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  cursor: pointer;\n}\n\n.todo-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 2px solid var(--textColor);\n  padding: 5px;\n  border-radius: 10px;\n}\n\n.todo-item:hover {\n  background-color: var(--bgColor1);\n}\n\n.todo-item:active,\n.content .add-todo:active {\n  transform: scale(0.995);\n}\n\n.left {\n  display: flex;\n  flex: 3;\n  gap: 10px;\n  flex-wrap: wrap;\n  color: var(--textColor);\n  font-size: 17px;\n  font-weight: 500;\n}\n\n.left .text p:nth-child(2) {\n  font-size: 15px;\n}\n\n.item-checked {\n  text-decoration: line-through;\n  opacity: 0.7;\n}\n\n.right {\n  display: flex;\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n  gap: 20px;\n  padding-right: 15px;\n}\n\n.date {\n  font-size: 0.9rem;\n  padding: 3px 6px;\n  margin: 6px 5px;\n  border: solid 1.5px var(--textColor);\n  border-radius: 10px;\n}\n\n.unchecked {\n  width: 13px;\n  height: 13px;\n  border: solid 2px var(--textColor);\n  border-radius: 50%;\n  margin-right: 8px;\n  margin-top: 10px;\n  flex-shrink: 0;\n}\n\n.checked {\n  background-image: url(../assets/checkmark.png);\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-origin: border-box;\n  background-color: white;\n  border-color: var(--accent);\n}\n\n.todo-form {\n  background-color: var(--bgColor1);\n  color: var(--textColor);\n  border-radius: 10px;\n}\n\n.todo-form > form {\n  display: flex;\n  flex-direction: column;\n  pointer-events: auto;\n  position: relative;\n  transition-delay: 1s;\n  max-height: 500px;\n  transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;\n  padding: 15px 20px;\n  font-size: 1.2rem;\n}\n\n.todo-form input[type=\"text\"],\ntextarea,\ninput[type=\"date\"] {\n  width: 100%;\n  box-sizing: border-box;\n  font-size: 1rem;\n  background-color: white;\n  border: solid 2px #273746;\n  border-radius: 3px;\n  padding: 5px;\n  resize: none;\n}\n\n.todo-form .buttons {\n  margin-top: 10px;\n}\n\n.content .add-todo:hover {\n  background-color: var(--bgColor1);\n}\n@media (max-width: 930px) {\n  .container {\n    flex-direction: column;\n  }\n\n  .sidebar {\n    z-index: 3;\n    overflow: auto;\n    width: auto;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Poppins\", sans-serif;\n  --main-green: #1abc9c;\n  --second-green: #2ecc71;\n  --bgColor2: #ececec;\n  --bgColor3: #f2f3f5;\n  --bgColor1: #fefcfe;\n  --bgColorPopUp: #f3f1f3;\n  --textColor: #374958;\n  --accentDark: #1f8d4d;\n  --accent: #2abd67;\n}\n\nbody {\n  height: 100%;\n}\n\nheader {\n  position: relative;\n  height: 70px;\n  background-color: var(--bgColor3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: 2px solid var(--accentDark);\n  user-select: none;\n}\n\n.hamburger {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 6px;\n  left: 10px;\n  padding: 4px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n\n.hamburger:hover,\n.project-item > img:hover,\n.right img:hover {\n  background-color: rgba(128, 128, 128, 0.267);\n}\n\n.hamburger:active,\nbutton:active,\n.project-item img:active,\n.project-form .buttons > input:active,\n.right img:active,\n.todo-form .buttons > input:active {\n  transform: scale(0.95);\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 30px;\n  font-weight: 600;\n  gap: 8px;\n  cursor: pointer;\n}\n\n.logo > span {\n  color: var(--second-green);\n}\n\n.container {\n  display: flex;\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n}\n\n.sidebar {\n  background-color: var(--bgColor1);\n  box-sizing: border-box;\n  width: 350px;\n  user-select: none;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  gap: 15px;\n  transition: 1s ease-out;\n}\n\n.home,\n.projects {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.sidebar button,\n.project-item,\n.content .add-todo {\n  display: flex;\n  justify-content: start;\n  height: 40px;\n  gap: 15px;\n  align-items: center;\n  font-size: 18px;\n  padding-left: 10px;\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n\n.sidebar button:hover,\n.project-form:hover,\n.project-item:hover,\n.content .add-todo:hover {\n  border-radius: 5px;\n  background-color: var(--bgColor2);\n}\n\n.home > button.active {\n  border-radius: 0 5px 5px 0;\n  border-left: 5px solid var(--accent);\n  background-color: #2abd6770;\n}\n\n.home > button.active:hover,\n.project-form .buttons > input:hover,\n.todo-form .buttons > input:hover {\n  filter: brightness(90%) !important;\n}\n\n.sidebar h2 {\n  border-bottom: 1px solid black;\n  padding-bottom: 5px;\n  padding-left: 5px;\n  font-weight: 600;\n}\n\n.hide {\n  display: none;\n  pointer-events: none !important;\n  position: absolute !important;\n  max-height: 0 !important;\n  transition: max-height 1s ease-out !important;\n  opacity: 0 !important;\n}\n\n.add-project {\n  transition: 1s ease-out;\n}\n\n.project-item {\n  justify-content: space-between;\n}\n\n.project-item > img,\n.right img {\n  padding: 3px;\n  border-radius: 4px;\n  margin-right: 5px;\n}\n\n.project-form form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  transition: 0.5s ease-in-out;\n  gap: 15px;\n}\n\n.project-form input[type=\"text\"] {\n  width: 80%;\n  height: 30px;\n  border: black 2px solid;\n  border-radius: 2px;\n  padding-left: 5px;\n}\n\n.project-form .buttons,\n.todo-form .buttons {\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n\n.project-form .buttons > input,\n.todo-form .buttons > input {\n  border: none;\n  width: 70px;\n  color: white;\n  font-size: 16px;\n  height: 35px;\n  border-radius: 4px;\n}\n\n.project-form .buttons > input[value=\"Add\"],\n.todo-form .buttons > input[value=\"Add\"] {\n  background-color: var(--accentDark);\n}\n\n.project-form .buttons > input[value=\"Cancel\"],\n.todo-form .buttons > input[value=\"Cancel\"] {\n  background-color: rgb(235, 80, 80);\n}\n\n.content {\n  background-color: var(--bgColor2);\n  padding: 30px 50px;\n  flex: 1;\n  min-height: 100vh;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.name {\n  background-color: var(--accent);\n  height: 60px;\n  padding: 20px;\n  font-size: 2rem;\n  color: #f7f5f5;\n  border-radius: 3px;\n  margin-bottom: 10px;\n}\n\n.todos {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  cursor: pointer;\n}\n\n.todo-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 2px solid var(--textColor);\n  padding: 5px;\n  border-radius: 10px;\n}\n\n.todo-item:hover {\n  background-color: var(--bgColor1);\n}\n\n.todo-item:active,\n.content .add-todo:active {\n  transform: scale(0.995);\n}\n\n.left {\n  display: flex;\n  flex: 3;\n  gap: 10px;\n  flex-wrap: wrap;\n  color: var(--textColor);\n  font-size: 17px;\n  font-weight: 500;\n}\n\n.left .text p:nth-child(2) {\n  font-size: 15px;\n}\n\n.item-checked {\n  text-decoration: line-through;\n  opacity: 0.7;\n}\n\n.right {\n  display: flex;\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n  gap: 20px;\n  padding-right: 15px;\n}\n\n.date {\n  font-size: 0.9rem;\n  padding: 3px 6px;\n  margin: 6px 5px;\n  border: solid 1.5px var(--textColor);\n  border-radius: 10px;\n}\n\n.unchecked {\n  width: 13px;\n  height: 13px;\n  border: solid 2px var(--textColor);\n  border-radius: 50%;\n  margin-right: 8px;\n  margin-top: 10px;\n  flex-shrink: 0;\n}\n\n.checked {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-origin: border-box;\n  background-color: white;\n  border-color: var(--accent);\n}\n\n.todo-form {\n  background-color: var(--bgColor1);\n  color: var(--textColor);\n  border-radius: 10px;\n}\n\n.todo-form > form {\n  display: flex;\n  flex-direction: column;\n  pointer-events: auto;\n  position: relative;\n  transition-delay: 1s;\n  max-height: 500px;\n  transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;\n  padding: 15px 20px;\n  font-size: 1.2rem;\n}\n\n.todo-form input[type=\"text\"],\ntextarea,\ninput[type=\"date\"] {\n  width: 100%;\n  box-sizing: border-box;\n  font-size: 1rem;\n  background-color: white;\n  border: solid 2px #273746;\n  border-radius: 3px;\n  padding: 5px;\n  resize: none;\n}\n\n.todo-form .buttons {\n  margin-top: 10px;\n}\n\n.content .add-todo:hover {\n  background-color: var(--bgColor1);\n}\n\n.project-item p {\n  pointer-events: none;\n}\n.project-item.active{\n  background-color: var(--bgColor2);\n}\n@media (max-width: 930px) {\n  .container {\n    flex-direction: column;\n  }\n\n  .sidebar {\n    z-index: 3;\n    overflow: auto;\n    width: auto;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kristi&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap\");\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Poppins\", sans-serif;\n  --main-green: #1abc9c;\n  --second-green: #2ecc71;\n  --bgColor2: #ececec;\n  --bgColor3: #f2f3f5;\n  --bgColor1: #fefcfe;\n  --bgColorPopUp: #f3f1f3;\n  --textColor: #374958;\n  --accentDark: #1f8d4d;\n  --accent: #2abd67;\n}\n\nbody {\n  height: 100%;\n}\n\nheader {\n  position: relative;\n  height: 70px;\n  background-color: var(--bgColor3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: 2px solid var(--accentDark);\n  user-select: none;\n}\n\n.hamburger {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 6px;\n  left: 10px;\n  padding: 4px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n\n.hamburger:hover,\n.project-item > img:hover,\n.right img:hover {\n  background-color: rgba(128, 128, 128, 0.267);\n}\n\n.hamburger:active,\nbutton:active,\n.project-item img:active,\n.project-form .buttons > input:active,\n.right img:active,\n.todo-form .buttons > input:active {\n  transform: scale(0.95);\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 30px;\n  font-weight: 600;\n  gap: 8px;\n  cursor: pointer;\n}\n\n.logo > span {\n  color: var(--second-green);\n}\n\n.container {\n  display: flex;\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n}\n\n.sidebar {\n  background-color: var(--bgColor1);\n  box-sizing: border-box;\n  width: 350px;\n  user-select: none;\n  display: flex;\n  flex-direction: column;\n  padding: 20px;\n  gap: 15px;\n  transition: 1s ease-out;\n}\n\n.home,\n.projects {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.sidebar button,\n.project-item,\n.content .add-todo {\n  display: flex;\n  justify-content: start;\n  height: 40px;\n  gap: 15px;\n  align-items: center;\n  font-size: 18px;\n  padding-left: 10px;\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n\n.sidebar button:hover,\n.project-form:hover,\n.project-item:hover,\n.content .add-todo:hover {\n  border-radius: 5px;\n  background-color: var(--bgColor2);\n}\n\n.home > button.active {\n  border-radius: 0 5px 5px 0;\n  border-left: 5px solid var(--accent);\n  background-color: #2abd6770;\n}\n\n.home > button.active:hover,\n.project-form .buttons > input:hover,\n.todo-form .buttons > input:hover {\n  filter: brightness(90%) !important;\n}\n\n.sidebar h2 {\n  border-bottom: 1px solid black;\n  padding-bottom: 5px;\n  padding-left: 5px;\n  font-weight: 600;\n}\n\n.hide {\n  display: none;\n  pointer-events: none !important;\n  position: absolute !important;\n  max-height: 0 !important;\n  transition: max-height 1s ease-out !important;\n  opacity: 0 !important;\n}\n\n.add-project {\n  transition: 1s ease-out;\n}\n\n.project-item {\n  justify-content: space-between;\n}\n\n.project-item > img,\n.right img {\n  padding: 3px;\n  border-radius: 4px;\n  margin-right: 5px;\n}\n\n.project-form form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  transition: 0.5s ease-in-out;\n  gap: 15px;\n}\n\n.project-form input[type=\"text\"] {\n  width: 80%;\n  height: 30px;\n  border: black 2px solid;\n  border-radius: 2px;\n  padding-left: 5px;\n}\n\n.project-form .buttons,\n.todo-form .buttons {\n  display: flex;\n  gap: 10px;\n  justify-content: center;\n}\n\n.project-form .buttons > input,\n.todo-form .buttons > input {\n  border: none;\n  width: 70px;\n  color: white;\n  font-size: 16px;\n  height: 35px;\n  border-radius: 4px;\n}\n\n.project-form .buttons > input[value=\"Add\"],\n.todo-form .buttons > input[value=\"Add\"] {\n  background-color: var(--accentDark);\n}\n\n.project-form .buttons > input[value=\"Cancel\"],\n.todo-form .buttons > input[value=\"Cancel\"] {\n  background-color: rgb(235, 80, 80);\n}\n\n.content {\n  background-color: var(--bgColor2);\n  padding: 30px 50px;\n  flex: 1;\n  min-height: 100vh;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.name {\n  background-color: var(--accent);\n  height: 60px;\n  padding: 20px;\n  font-size: 2rem;\n  color: #f7f5f5;\n  border-radius: 3px;\n  margin-bottom: 10px;\n}\n\n.todos {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  cursor: pointer;\n}\n\n.todo-item {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 2px solid var(--textColor);\n  padding: 5px;\n  border-radius: 10px;\n}\n\n.todo-item:hover {\n  background-color: var(--bgColor1);\n}\n\n.todo-item:active,\n.content .add-todo:active {\n  transform: scale(0.995);\n}\n\n.left {\n  display: flex;\n  flex: 3;\n  gap: 10px;\n  flex-wrap: wrap;\n  color: var(--textColor);\n  font-size: 17px;\n  font-weight: 500;\n}\n\n.left .text p:nth-child(2) {\n  font-size: 15px;\n}\n\n.item-checked {\n  text-decoration: line-through;\n  opacity: 0.7;\n}\n\n.right {\n  display: flex;\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n  gap: 20px;\n  padding-right: 15px;\n}\n\n.date {\n  font-size: 0.9rem;\n  padding: 3px 6px;\n  margin: 6px 5px;\n  border: solid 1.5px var(--textColor);\n  border-radius: 10px;\n}\n\n.unchecked {\n  width: 13px;\n  height: 13px;\n  border: solid 2px var(--textColor);\n  border-radius: 50%;\n  margin-right: 8px;\n  margin-top: 10px;\n  flex-shrink: 0;\n}\n\n.checked {\n  background-image: url(../assets/checkmark.png);\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-origin: border-box;\n  background-color: white;\n  border-color: var(--accent);\n}\n\n.todo-form {\n  background-color: var(--bgColor1);\n  color: var(--textColor);\n  border-radius: 10px;\n}\n\n.todo-form > form {\n  display: flex;\n  flex-direction: column;\n  pointer-events: auto;\n  position: relative;\n  transition-delay: 1s;\n  max-height: 500px;\n  transition: max-height 0.8s ease-out, opacity 300ms ease-in-out;\n  padding: 15px 20px;\n  font-size: 1.2rem;\n}\n\n.todo-form input[type=\"text\"],\ntextarea,\ninput[type=\"date\"] {\n  width: 100%;\n  box-sizing: border-box;\n  font-size: 1rem;\n  background-color: white;\n  border: solid 2px #273746;\n  border-radius: 3px;\n  padding: 5px;\n  resize: none;\n}\n\n.todo-form .buttons {\n  margin-top: 10px;\n}\n\n.content .add-todo:hover {\n  background-color: var(--bgColor1);\n}\n\n.project-item p {\n  pointer-events: none;\n}\n.project-item.active{\n  background-color: var(--bgColor2);\n}\n@media (max-width: 930px) {\n  .container {\n    flex-direction: column;\n  }\n\n  .sidebar {\n    z-index: 3;\n    overflow: auto;\n    width: auto;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -574,6 +574,249 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "displayController": () => (/* binding */ displayController)
+/* harmony export */ });
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _assets_hamburger_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hamburger.png */ "./src/assets/hamburger.png");
+/* harmony import */ var _assets_todo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/todo.png */ "./src/assets/todo.png");
+/* harmony import */ var _assets_tasks_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/tasks.png */ "./src/assets/tasks.png");
+/* harmony import */ var _assets_today_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/today.png */ "./src/assets/today.png");
+/* harmony import */ var _assets_week_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/week.png */ "./src/assets/week.png");
+/* harmony import */ var _assets_add_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/add.png */ "./src/assets/add.png");
+/* harmony import */ var _assets_del_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/del.png */ "./src/assets/del.png");
+/* harmony import */ var _assets_drag_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/drag.png */ "./src/assets/drag.png");
+/* harmony import */ var _modules_projectController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/projectController */ "./src/modules/projectController.js");
+
+
+
+
+
+
+
+
+
+
+
+const displayController = (() => {
+  addEvents();
+  function addEvents() {
+    var menu = document.querySelector(".hamburger");
+    var addProjectButton = document.querySelector(".add-project");
+    var cancelProject = document.querySelector(".cancel-project");
+
+    var tasksButtons = document.querySelectorAll(".btn");
+
+    var addTodoButton = document.querySelector(".add-todo");
+    var cancelTodo = document.querySelector(".cancel-todo");
+
+    var projectSubmit = document.querySelector('.project-add')
+    projectSubmit.addEventListener('click',_modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.addProject);
+
+    menu.addEventListener("click", clickMenu);
+    addProjectButton.addEventListener("click", toggleProjectForm);
+    cancelProject.addEventListener("click", toggleProjectForm);
+
+    addTodoButton.addEventListener("click", toggleTodoForm);
+    cancelTodo.addEventListener("click", toggleTodoForm);
+
+    tasksButtons.forEach((btn) => btn.addEventListener("click", changeTaskTab));
+  }
+
+  function clickMenu() {
+    var sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("hide");
+  }
+
+  function changeTaskTab(e) {
+    var btns = document.querySelectorAll(".btn");
+    var projectItems = document.querySelectorAll(".project-item");
+    var addTodo = document.querySelector('.add-todo')
+    addTodo.setAttribute('data-project-name','')
+
+    btns.forEach((btn) => btn.classList.remove("active"));
+    projectItems.forEach((item) => item.classList.remove("active"));
+    e.target.classList.add("active");
+    var heading = document.querySelector(".name");
+    if (e.target.classList.contains("all-tasks")) {
+      heading.innerText = "All Tasks";
+      addTodo.classList.add('hide');
+    } else if (e.target.classList.contains("today")) {
+      heading.innerText = "Today's Tasks";
+      addTodo.classList.add('hide');
+
+    } else if (e.target.classList.contains("week")) {
+      heading.innerText = "This Week's Tasks";
+      addTodo.classList.add('hide');
+
+    }
+    else if(e.target.classList.contains("project-item")){
+      heading.innerText = e.target.querySelector('p').innerText;
+      addTodo.classList.remove('hide');
+      addTodo.setAttribute('data-project-name',e.target.querySelector('p').innerText)
+      
+    }
+  }
+
+  function toggleProjectForm(e) {
+    if (e.target.classList.contains("add-project")) {
+      e.target.classList.add("hide");
+      var form = document.querySelector(".project-form");
+      form.classList.remove("hide");
+    } else if (e.target.classList.contains("cancel-project")) {
+      var form = document.querySelector(".project-form");
+
+      form.classList.add("hide");
+      var input = document.querySelector(".project-name-inp");
+      input.value = "";
+      var projectButton = document.querySelector(".add-project");
+
+      projectButton.classList.remove("hide");
+    }
+  }
+
+  function toggleTodoForm(e) {
+    if (e.target.classList.contains("add-todo")) {
+      e.target.classList.add("hide");
+      var form = document.querySelector(".todo-form");
+      form.classList.remove("hide");
+    } else if (e.target.classList.contains("cancel-todo")) {
+      var form = document.querySelector(".todo-form");
+
+      form.classList.add("hide");
+
+      var todoButton = document.querySelector(".add-todo");
+
+      todoButton.classList.remove("hide");
+    }
+  }
+
+  return {changeTaskTab};
+})();
+
+
+
+
+/***/ }),
+
+/***/ "./src/modules/project.js":
+/*!********************************!*\
+  !*** ./src/modules/project.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Project)
+/* harmony export */ });
+class Project{
+    constructor(name){
+        this.name = name;
+        this.todos = [];
+    }
+    addTodo(todo){
+        this.todos.push(todo);
+    }
+    addDomElements(){
+        var div = document.createElement('div');
+        div.classList.add('project-item');
+
+        var dragImg = document.createElement('img');
+        dragImg.setAttribute('src','drag.png');
+        dragImg.setAttribute('width','27px');
+
+        var p = document.createElement('p');
+        p.textContent = this.name;
+
+        var delImg = document.createElement('img');
+        delImg.setAttribute('src','del.png');
+
+        div.appendChild(dragImg);
+        div.appendChild(p);
+        div.appendChild(delImg);
+
+        return div;
+    }
+}
+
+/***/ }),
+
+/***/ "./src/modules/projectController.js":
+/*!******************************************!*\
+  !*** ./src/modules/projectController.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "projectController": () => (/* binding */ projectController)
+/* harmony export */ });
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/modules/project.js");
+/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo */ "./src/modules/todo.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! .. */ "./src/index.js");
+
+
+
+
+const projectController = (()=>{
+    var projects = [];
+
+    function addProject(e){
+        var newProject = new _project__WEBPACK_IMPORTED_MODULE_0__["default"](e.target.parentNode.parentNode[0].value)
+        projects.push(newProject);
+
+        var projectList = document.querySelector('.project-items')
+        var item = newProject.addDomElements()
+        item.addEventListener('click',___WEBPACK_IMPORTED_MODULE_2__.displayController.changeTaskTab)
+        projectList.appendChild(item)
+
+
+        var form = document.querySelector(".project-form");
+
+        form.classList.add("hide");
+        var input = document.querySelector(".project-name-inp");
+        input.value = "";
+        var projectButton = document.querySelector(".add-project");
+
+        projectButton.classList.remove("hide");
+
+    }
+
+
+    return {addProject}
+})()
+
+
+
+/***/ }),
+
+/***/ "./src/modules/todo.js":
+/*!*****************************!*\
+  !*** ./src/modules/todo.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Todo)
+/* harmony export */ });
+class Todo{
+    constructor(title,desc,date){
+        this.title = title;
+        this.desc = desc;
+        this.date = date;
+    }
+}
+
+/***/ }),
+
 /***/ "./src/assets/add.png":
 /*!****************************!*\
   !*** ./src/assets/add.png ***!
@@ -798,109 +1041,12 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
-/* harmony import */ var _assets_hamburger_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hamburger.png */ "./src/assets/hamburger.png");
-/* harmony import */ var _assets_todo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/todo.png */ "./src/assets/todo.png");
-/* harmony import */ var _assets_tasks_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/tasks.png */ "./src/assets/tasks.png");
-/* harmony import */ var _assets_today_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/today.png */ "./src/assets/today.png");
-/* harmony import */ var _assets_week_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/week.png */ "./src/assets/week.png");
-/* harmony import */ var _assets_add_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/add.png */ "./src/assets/add.png");
-/* harmony import */ var _assets_del_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/del.png */ "./src/assets/del.png");
-/* harmony import */ var _assets_drag_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/drag.png */ "./src/assets/drag.png");
-
-
-
-
-
-
-
-
-
-
-const displayController = (() => {
-  addEvents();
-  function addEvents() {
-    var menu = document.querySelector(".hamburger");
-    var addProjectButton = document.querySelector(".add-project");
-    var cancelProject = document.querySelector(".cancel-project");
-
-    var tasksButtons = document.querySelectorAll(".btn");
-
-    var addTodoButton = document.querySelector(".add-todo");
-    var cancelTodo = document.querySelector(".cancel-todo");
-
-    menu.addEventListener("click", clickMenu);
-    addProjectButton.addEventListener("click", toggleProjectForm);
-    cancelProject.addEventListener("click", toggleProjectForm);
-
-    addTodoButton.addEventListener("click", toggleTodoForm);
-    cancelTodo.addEventListener("click", toggleTodoForm);
-
-    tasksButtons.forEach((btn) => btn.addEventListener("click", changeTaskTab));
-  }
-
-  function clickMenu() {
-    var sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("hide");
-  }
-
-  function changeTaskTab(e) {
-    var btns = document.querySelectorAll(".btn");
-    btns.forEach((btn) => btn.classList.remove("active"));
-    e.target.classList.add("active");
-    var heading = document.querySelector(".name");
-    if (e.target.classList.contains("all-tasks")) {
-      heading.innerText = "All Tasks";
-    } else if (e.target.classList.contains("today")) {
-      heading.innerText = "Today's Tasks";
-    } else if (e.target.classList.contains("week")) {
-      heading.innerText = "This Week's Tasks";
-    }
-  }
-
-  function toggleProjectForm(e) {
-    if (e.target.classList.contains("add-project")) {
-      e.target.classList.add("hide");
-      var form = document.querySelector(".project-form");
-      form.classList.remove("hide");
-    } else if (e.target.classList.contains("cancel-project")) {
-      var form = document.querySelector(".project-form");
-
-      form.classList.add("hide");
-      var input = document.querySelector(".project-name-inp");
-      input.value = "";
-      var projectButton = document.querySelector(".add-project");
-
-      projectButton.classList.remove("hide");
-    }
-  }
-
-  function toggleTodoForm(e) {
-    if (e.target.classList.contains("add-todo")) {
-      e.target.classList.add("hide");
-      var form = document.querySelector(".todo-form");
-      form.classList.remove("hide");
-    } else if (e.target.classList.contains("cancel-todo")) {
-      var form = document.querySelector(".todo-form");
-
-      form.classList.add("hide");
-
-      var todoButton = document.querySelector(".add-todo");
-
-      todoButton.classList.remove("hide");
-    }
-  }
-})();
-
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundle52d6f7deb4a74063f4be.js.map
+//# sourceMappingURL=bundle7717f92eee3744ca5a28.js.map
