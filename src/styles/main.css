@@ -348,6 +348,13 @@ input[type="date"] {
 .content .add-todo:hover {
   background-color: var(--bgColor1);
 }
+
+.project-item p {
+  pointer-events: none;
+}
+.project-item.active{
+  background-color: var(--bgColor2);
+}
 @media (max-width: 930px) {
   .container {
     flex-direction: column;

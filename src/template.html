@@ -31,13 +31,7 @@
         </div>
         <div class="projects">
           <h2>Projects</h2>
-          <div class="project-items">
-            <div class="project-item">
-              <img src="drag.png" alt="" width="27px" />
-              <p>Project</p>
-              <img src="del.png" alt="" />
-            </div>
-          </div>
+          <div class="project-items"></div>
           <button class="add-project">
             <img src="add.png" alt="" width="27px" /> Add Project
           </button>
@@ -46,11 +40,12 @@
               <input
                 class="project-name-inp"
                 type="text"
+                name="project-name"
                 placeholder="Enter Project Name"
                 required
               />
               <div class="buttons">
-                <input type="submit" class="project-add" value="Add" />
+                <input type="button" class="project-add" value="Add" />
                 <input type="button" class="cancel-project" value="Cancel" />
               </div>
             </form>
@@ -114,7 +109,7 @@
             </div>
           </form>
         </div>
-        <button class="add-todo">
+        <button class="add-todo hide">
           <img src="add.png" alt="" width="27px" /> Add Todo
         </button>
       </div>

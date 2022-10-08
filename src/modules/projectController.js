@@ -1,5 +1,6 @@
 import Project from "./project";
 import Todo from "./todo";
+import { displayController } from "..";
 
 const projectController = (()=>{
     var projects = [];
@@ -9,7 +10,19 @@ const projectController = (()=>{
         projects.push(newProject);
 
         var projectList = document.querySelector('.project-items')
-        projectList.appendChild(newProject.addDomElements())
+        var item = newProject.addDomElements()
+        item.addEventListener('click',displayController.changeTaskTab)
+        projectList.appendChild(item)
+
+
+        var form = document.querySelector(".project-form");
+
+        form.classList.add("hide");
+        var input = document.querySelector(".project-name-inp");
+        input.value = "";
+        var projectButton = document.querySelector(".add-project");
+
+        projectButton.classList.remove("hide");
 
     }
 
