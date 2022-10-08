@@ -12,7 +12,7 @@ export default class Todo{
     addDomElements(){
         var mainDiv = document.createElement('div');
         mainDiv.classList.add('todo-item');
-        mainDiv.setAttribute('data-project-name',this.project);
+        mainDiv.setAttribute('data-project-title',this.project);
 
         var left = document.createElement('div');
         left.classList.add('left');

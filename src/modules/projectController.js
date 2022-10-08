@@ -38,10 +38,10 @@ const projectController = (()=>{
             return;
         }
         
+        var addTodoButton = document.querySelector('.add-todo')
         var projectName = addTodoButton.getAttribute('data-project-name');
         var todo = new Todo(form[0].value,form[1].value,form[2].value,projectName,false)
         
-        var addTodoButton = document.querySelector('.add-todo')
         projects.forEach(project =>{
             if (project.name===projectName) {
                 project.addTodo(todo);
@@ -95,11 +95,29 @@ const projectController = (()=>{
         })
     }
 
-    function deleteTodo(){
+    function deleteTodo(e){
+
+        var projectName = e.target.parentNode.parentNode.getAttribute('data-project-title');
+        var taskTitle = e.target.parentNode.parentNode.querySelector('p');
+        var todoItem;
+        projects.forEach(project=>{
+            if (project.name==projectName) {
+                project.todos.forEach(todo=>{
+                    if(todo.title==taskTitle){
+                        todoItem = todo;
+                    }
+                })
+                project.todos.splice(todoItem,1);
+            }
+        })
+
+        showProjects(projectName);
+        
+
 
     }
-    function deleteProject(){
-
+    function deleteProject(e){
+        console.log(e.target.parentNode)
     }
 
 
