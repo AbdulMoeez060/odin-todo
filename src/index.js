@@ -24,6 +24,9 @@ const displayController = (() => {
     var projectSubmit = document.querySelector('.project-add')
     projectSubmit.addEventListener('click',projectController.addProject);
 
+    var todoSubmit = document.querySelector('.todo-add');
+    todoSubmit.addEventListener('click',projectController.addTodoTask);
+
     menu.addEventListener("click", clickMenu);
     addProjectButton.addEventListener("click", toggleProjectForm);
     cancelProject.addEventListener("click", toggleProjectForm);

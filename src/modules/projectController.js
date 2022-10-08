@@ -32,8 +32,34 @@ const projectController = (()=>{
 
     }
 
+    function addTodoTask(e){
+        var form = e.target.parentNode.parentNode;
+        if(form[0].value==''||form[2].value==''){
+            return;
+        }
+        
+        var todo = new Todo(form[0].value,form[1].value,form[2].value,false)
+        
+        var addTodoButton = document.querySelector('.add-todo')
+        var projectName = addTodoButton.getAttribute('data-project-name');
+        projects.forEach(project =>{
+            if (project.name===projectName) {
+                project.addTodo(todo);
+            }
+        })
+        console.log(projects)
 
-    return {addProject}
+        form[0].value = '';
+        form[1].value = '';
+        form[2].value = '';
+        form.parentNode.classList.add('hide');
+
+        addTodoButton.classList.remove('hide');
+
+    }
+
+
+    return {addProject,addTodoTask}
 })()
 
 export {projectController};
