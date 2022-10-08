@@ -104,6 +104,7 @@ const displayController = (() => {
       todoButton.classList.remove("hide");
     }
   }
+  
 
   return {changeTaskTab};
 })();

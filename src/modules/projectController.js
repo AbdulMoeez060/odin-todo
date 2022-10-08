@@ -63,8 +63,13 @@ const projectController = (()=>{
 
     }
 
+    function toggleTaskCheck(e){
+        e.target.classList.toggle('checked');
+        e.target.nextSibling.classList.toggle('item-checked')
+    }
 
-    return {addProject,addTodoTask}
+
+    return {addProject,addTodoTask,toggleTaskCheck}
 })()
 
 export {projectController};

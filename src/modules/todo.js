@@ -1,3 +1,5 @@
+import { projectController } from "./projectController";
+
 export default class Todo{
     constructor(title,desc,date,checked){
         this.title = title;
@@ -15,6 +17,8 @@ export default class Todo{
 
         var box = document.createElement('div');
         box.classList.add("unchecked");
+
+        box.addEventListener('click',projectController.toggleTaskCheck)
 
         var texts = document.createElement('div');
         texts.classList.add('text');
