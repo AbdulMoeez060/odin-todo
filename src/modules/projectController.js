@@ -65,7 +65,17 @@ const projectController = (()=>{
 
     function toggleTaskCheck(e){
         e.target.classList.toggle('checked');
-        e.target.nextSibling.classList.toggle('item-checked')
+        e.target.nextSibling.classList.toggle('item-checked');
+
+        var title = e.target.nextSibling.querySelector('p').innerText
+
+        projects.forEach(project=>{
+            project.todos.forEach(todo => {
+                if (todo.title == title) {
+                    todo.checked = !todo.checked;
+                }
+            });
+        })
     }
 
 
