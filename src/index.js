@@ -7,7 +7,6 @@ import week from "./assets/week.png";
 import add from "./assets/add.png";
 import del from "./assets/del.png";
 import drag from "./assets/drag.png";
-
 import { projectController } from "./modules/projectController";
 
 const displayController = (() => {

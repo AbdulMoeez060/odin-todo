@@ -6,6 +6,13 @@ const projectController = (()=>{
     var projects = [];
 
     function addProject(e){
+        e.preventDefault();
+        var input = document.querySelector(".project-name-inp");
+
+        if(input.value==""){
+            return;
+        }
+
         var newProject = new Project(e.target.parentNode.parentNode[0].value)
         projects.push(newProject);
 
@@ -18,7 +25,6 @@ const projectController = (()=>{
         var form = document.querySelector(".project-form");
 
         form.classList.add("hide");
-        var input = document.querySelector(".project-name-inp");
         input.value = "";
         var projectButton = document.querySelector(".add-project");
 
