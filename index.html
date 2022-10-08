@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-  <script defer src="bundle7717f92eee3744ca5a28.js"></script></head>
+  <script defer src="bundle61299727031417bcd8ea.js"></script></head>
   <body>
     <header>
       <div class="hamburger">
@@ -36,16 +36,15 @@
             <img src="add.png" alt="" width="27px" /> Add Project
           </button>
           <div class="project-form hide">
-            <form onsubmit="event.preventDefault();">
+            <form>
               <input
                 class="project-name-inp"
                 type="text"
                 name="project-name"
                 placeholder="Enter Project Name"
-                required
               />
               <div class="buttons">
-                <input type="button" class="project-add" value="Add" />
+                <input type="submit" class="project-add" value="Add" />
                 <input type="button" class="cancel-project" value="Cancel" />
               </div>
             </form>
@@ -90,7 +89,6 @@
               name="title"
               id="title"
               placeholder="What to do?"
-              required
             />
             <label for="desc">Description:</label>
             <textarea
@@ -102,7 +100,7 @@
               wrap="hard"
             ></textarea>
             <label for="date">Date:</label>
-            <input type="date" name="date" id="date" required />
+            <input type="date" name="date" id="date" />
             <div class="buttons">
               <input type="submit" class="todo-add" value="Add" />
               <input type="button" class="cancel-todo" value="Cancel" />

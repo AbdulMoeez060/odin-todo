@@ -620,6 +620,9 @@ const displayController = (() => {
     var projectSubmit = document.querySelector('.project-add')
     projectSubmit.addEventListener('click',_modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.addProject);
 
+    var todoSubmit = document.querySelector('.todo-add');
+    todoSubmit.addEventListener('click',_modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.addTodoTask);
+
     menu.addEventListener("click", clickMenu);
     addProjectButton.addEventListener("click", toggleProjectForm);
     cancelProject.addEventListener("click", toggleProjectForm);
@@ -767,8 +770,16 @@ __webpack_require__.r(__webpack_exports__);
 
 const projectController = (()=>{
     var projects = [];
+    var allTasks = [];
 
     function addProject(e){
+        e.preventDefault();
+        var input = document.querySelector(".project-name-inp");
+
+        if(input.value==""){
+            return;
+        }
+
         var newProject = new _project__WEBPACK_IMPORTED_MODULE_0__["default"](e.target.parentNode.parentNode[0].value)
         projects.push(newProject);
 
@@ -781,7 +792,6 @@ const projectController = (()=>{
         var form = document.querySelector(".project-form");
 
         form.classList.add("hide");
-        var input = document.querySelector(".project-name-inp");
         input.value = "";
         var projectButton = document.querySelector(".add-project");
 
@@ -789,8 +799,38 @@ const projectController = (()=>{
 
     }
 
+    function addTodoTask(e){
+        var form = e.target.parentNode.parentNode;
+        if(form[0].value==''||form[2].value==''){
+            return;
+        }
+        
+        var todo = new _todo__WEBPACK_IMPORTED_MODULE_1__["default"](form[0].value,form[1].value,form[2].value,false)
+        
+        var addTodoButton = document.querySelector('.add-todo')
+        var projectName = addTodoButton.getAttribute('data-project-name');
+        projects.forEach(project =>{
+            if (project.name===projectName) {
+                project.addTodo(todo);
+            }
+        })
+        allTasks.push(todo);
 
-    return {addProject}
+        form[0].value = '';
+        form[1].value = '';
+        form[2].value = '';
+        form.parentNode.classList.add('hide');
+
+        addTodoButton.classList.remove('hide');
+
+        var task = todo.addDomElements();
+        var todoList = document.querySelector('.todos');
+        todoList.appendChild(task);
+
+    }
+
+
+    return {addProject,addTodoTask}
 })()
 
 
@@ -808,10 +848,61 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Todo)
 /* harmony export */ });
 class Todo{
-    constructor(title,desc,date){
+    constructor(title,desc,date,checked){
         this.title = title;
         this.desc = desc;
         this.date = date;
+        this.checked = checked
+    }
+
+    addDomElements(){
+        var mainDiv = document.createElement('div');
+        mainDiv.classList.add('todo-item');
+
+        var left = document.createElement('div');
+        left.classList.add('left');
+
+        var box = document.createElement('div');
+        box.classList.add("unchecked");
+
+        var texts = document.createElement('div');
+        texts.classList.add('text');
+
+        if(this.checked){
+            box.classList.add('checked');
+            texts.classList.add('item-checked');
+        }
+
+        var p1 = document.createElement('p');
+        p1.innerText = this.title;
+        var p2 = document.createElement('p');
+        p2.innerText = this.desc;
+
+        texts.appendChild(p1);
+        texts.appendChild(p2);
+
+        left.appendChild(box);
+        left.appendChild(texts);
+
+        mainDiv.appendChild(left);
+
+        var right = document.createElement('div');
+        right.classList.add('right');
+
+        var date = document.createElement('p');
+        date.classList.add('date');
+        date.innerText = this.date;
+
+        var delImg = document.createElement('img');
+        delImg.setAttribute('src','del.png');
+
+        right.appendChild(date);
+        right.appendChild(delImg);
+
+        mainDiv.appendChild(right);
+
+        return mainDiv;
+
     }
 }
 
@@ -1049,4 +1140,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundle7717f92eee3744ca5a28.js.map
+//# sourceMappingURL=bundle61299727031417bcd8ea.js.map
