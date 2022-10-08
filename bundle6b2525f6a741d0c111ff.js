@@ -700,6 +700,7 @@ const displayController = (() => {
       todoButton.classList.remove("hide");
     }
   }
+  
 
   return {changeTaskTab};
 })();
@@ -829,8 +830,23 @@ const projectController = (()=>{
 
     }
 
+    function toggleTaskCheck(e){
+        e.target.classList.toggle('checked');
+        e.target.nextSibling.classList.toggle('item-checked');
 
-    return {addProject,addTodoTask}
+        var title = e.target.nextSibling.querySelector('p').innerText
+
+        projects.forEach(project=>{
+            project.todos.forEach(todo => {
+                if (todo.title == title) {
+                    todo.checked = !todo.checked;
+                }
+            });
+        })
+    }
+
+
+    return {addProject,addTodoTask,toggleTaskCheck}
 })()
 
 
@@ -847,6 +863,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Todo)
 /* harmony export */ });
+/* harmony import */ var _projectController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./projectController */ "./src/modules/projectController.js");
+
+
 class Todo{
     constructor(title,desc,date,checked){
         this.title = title;
@@ -864,6 +883,8 @@ class Todo{
 
         var box = document.createElement('div');
         box.classList.add("unchecked");
+
+        box.addEventListener('click',_projectController__WEBPACK_IMPORTED_MODULE_0__.projectController.toggleTaskCheck)
 
         var texts = document.createElement('div');
         texts.classList.add('text');
@@ -1140,4 +1161,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundle61299727031417bcd8ea.js.map
+//# sourceMappingURL=bundle6b2525f6a741d0c111ff.js.map
