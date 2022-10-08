@@ -22,7 +22,8 @@ const displayController = (() => {
     var addTodoButton = document.querySelector(".add-todo");
     var cancelTodo = document.querySelector(".cancel-todo");
 
-    var projectSubmit = document.querySelector('submit',projectController.addProject);
+    var projectSubmit = document.querySelector('.project-add')
+    projectSubmit.addEventListener('click',projectController.addProject);
 
     menu.addEventListener("click", clickMenu);
     addProjectButton.addEventListener("click", toggleProjectForm);
