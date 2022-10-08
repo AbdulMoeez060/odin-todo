@@ -870,7 +870,7 @@ const projectController = (()=>{
     function deleteTodo(e){
 
         var projectName = e.target.parentNode.parentNode.getAttribute('data-project-title');
-        var taskTitle = e.target.parentNode.parentNode.querySelector('p');
+        var taskTitle = e.target.parentNode.parentNode.querySelector('p').innerText;
         var todoItem;
         projects.forEach(project=>{
             if (project.name==projectName) {
@@ -889,7 +889,24 @@ const projectController = (()=>{
 
     }
     function deleteProject(e){
-        console.log(e.target.parentNode)
+
+        var projectName = e.target.parentNode.querySelector('p').innerText;
+        var proj;
+        projects.forEach(project=>{
+            if(project.name== projectName){
+                proj = project
+            }
+        })
+        projects.splice(proj,1);
+        showAllProjects();
+
+
+    }
+
+    function showAllProjects(){
+        var projectItems = document.querySelector('.project-items');
+        projectItems.innerHTML = '';
+        projects.forEach(project=> projectItems.appendChild(project.addDomElements()))
     }
 
 
@@ -1212,4 +1229,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundle3a5875e4503802c56a46.js.map
+//# sourceMappingURL=bundle7811aeb3407599cbc1ca.js.map
