@@ -78,8 +78,25 @@ const projectController = (()=>{
         })
     }
 
+    function showAllTasks(){
+        var todoList = document.querySelector('.todos');
+        todoList.innerHTML = '';
+        allTasks.forEach(todo => todoList.appendChild(todo.addDomElements()));
+    }
 
-    return {addProject,addTodoTask,toggleTaskCheck}
+    function showProjects(name){
+        var todoList = document.querySelector('.todos');
+        todoList.innerHTML = '';
+
+        projects.forEach(project=>{
+            if(project.name == name){
+                project.todos.forEach(todo=>todoList.appendChild(todo.addDomElements()))
+            }
+        })
+    }
+
+
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects}
 })()
 
 export {projectController};

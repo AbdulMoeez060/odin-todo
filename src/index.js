@@ -55,6 +55,7 @@ const displayController = (() => {
     if (e.target.classList.contains("all-tasks")) {
       heading.innerText = "All Tasks";
       addTodo.classList.add('hide');
+      projectController.showAllTasks();
     } else if (e.target.classList.contains("today")) {
       heading.innerText = "Today's Tasks";
       addTodo.classList.add('hide');
@@ -68,7 +69,7 @@ const displayController = (() => {
       heading.innerText = e.target.querySelector('p').innerText;
       addTodo.classList.remove('hide');
       addTodo.setAttribute('data-project-name',e.target.querySelector('p').innerText)
-      
+      projectController.showProjects(e.target.querySelector('p').innerText);
     }
   }
 
