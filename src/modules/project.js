@@ -1,3 +1,5 @@
+import { projectController } from "./projectController";
+
 export default class Project{
     constructor(name){
         this.name = name;
@@ -19,6 +21,7 @@ export default class Project{
 
         var delImg = document.createElement('img');
         delImg.setAttribute('src','del.png');
+        delImg.addEventListener('click',projectController.deleteProject);
 
         div.appendChild(dragImg);
         div.appendChild(p);

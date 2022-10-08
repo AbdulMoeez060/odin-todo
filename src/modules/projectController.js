@@ -4,7 +4,6 @@ import { displayController } from "..";
 
 const projectController = (()=>{
     var projects = [];
-    var allTasks = [];
 
     function addProject(e){
         e.preventDefault();
@@ -39,16 +38,15 @@ const projectController = (()=>{
             return;
         }
         
-        var todo = new Todo(form[0].value,form[1].value,form[2].value,false)
+        var projectName = addTodoButton.getAttribute('data-project-name');
+        var todo = new Todo(form[0].value,form[1].value,form[2].value,projectName,false)
         
         var addTodoButton = document.querySelector('.add-todo')
-        var projectName = addTodoButton.getAttribute('data-project-name');
         projects.forEach(project =>{
             if (project.name===projectName) {
                 project.addTodo(todo);
             }
         })
-        allTasks.push(todo);
 
         form[0].value = '';
         form[1].value = '';
@@ -81,7 +79,9 @@ const projectController = (()=>{
     function showAllTasks(){
         var todoList = document.querySelector('.todos');
         todoList.innerHTML = '';
-        allTasks.forEach(todo => todoList.appendChild(todo.addDomElements()));
+        projects.forEach(project=>{
+                project.todos.forEach(todo=>todoList.appendChild(todo.addDomElements()))
+        })
     }
 
     function showProjects(name){
@@ -95,8 +95,15 @@ const projectController = (()=>{
         })
     }
 
+    function deleteTodo(){
 
-    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects}
+    }
+    function deleteProject(){
+
+    }
+
+
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject}
 })()
 
 export {projectController};

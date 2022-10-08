@@ -1,16 +1,18 @@
 import { projectController } from "./projectController";
 
 export default class Todo{
-    constructor(title,desc,date,checked){
+    constructor(title,desc,date,project,checked){
         this.title = title;
         this.desc = desc;
         this.date = date;
-        this.checked = checked
+        this.project = project;
+        this.checked = checked;
     }
 
     addDomElements(){
         var mainDiv = document.createElement('div');
         mainDiv.classList.add('todo-item');
+        mainDiv.setAttribute('data-project-name',this.project);
 
         var left = document.createElement('div');
         left.classList.add('left');
@@ -50,6 +52,8 @@ export default class Todo{
 
         var delImg = document.createElement('img');
         delImg.setAttribute('src','del.png');
+
+        delImg.addEventListener('click',projectController.deleteTodo);
 
         right.appendChild(date);
         right.appendChild(delImg);
