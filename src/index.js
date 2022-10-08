@@ -8,6 +8,8 @@ import add from "./assets/add.png";
 import del from "./assets/del.png";
 import drag from "./assets/drag.png";
 
+import { projectController } from "./modules/projectController";
+
 const displayController = (() => {
   addEvents();
   function addEvents() {
@@ -19,6 +21,8 @@ const displayController = (() => {
 
     var addTodoButton = document.querySelector(".add-todo");
     var cancelTodo = document.querySelector(".cancel-todo");
+
+    var projectSubmit = document.querySelector('submit',projectController.addProject);
 
     menu.addEventListener("click", clickMenu);
     addProjectButton.addEventListener("click", toggleProjectForm);
