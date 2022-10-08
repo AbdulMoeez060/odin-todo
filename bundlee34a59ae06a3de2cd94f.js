@@ -651,6 +651,7 @@ const displayController = (() => {
     if (e.target.classList.contains("all-tasks")) {
       heading.innerText = "All Tasks";
       addTodo.classList.add('hide');
+      _modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.showAllTasks();
     } else if (e.target.classList.contains("today")) {
       heading.innerText = "Today's Tasks";
       addTodo.classList.add('hide');
@@ -664,7 +665,7 @@ const displayController = (() => {
       heading.innerText = e.target.querySelector('p').innerText;
       addTodo.classList.remove('hide');
       addTodo.setAttribute('data-project-name',e.target.querySelector('p').innerText)
-      
+      _modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.showProjects(e.target.querySelector('p').innerText);
     }
   }
 
@@ -845,8 +846,25 @@ const projectController = (()=>{
         })
     }
 
+    function showAllTasks(){
+        var todoList = document.querySelector('.todos');
+        todoList.innerHTML = '';
+        allTasks.forEach(todo => todoList.appendChild(todo.addDomElements()));
+    }
 
-    return {addProject,addTodoTask,toggleTaskCheck}
+    function showProjects(name){
+        var todoList = document.querySelector('.todos');
+        todoList.innerHTML = '';
+
+        projects.forEach(project=>{
+            if(project.name == name){
+                project.todos.forEach(todo=>todoList.appendChild(todo.addDomElements()))
+            }
+        })
+    }
+
+
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects}
 })()
 
 
@@ -1161,4 +1179,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundle6b2525f6a741d0c111ff.js.map
+//# sourceMappingURL=bundlee34a59ae06a3de2cd94f.js.map
