@@ -110,8 +110,14 @@ const projectController = (()=>{
                 project.todos.splice(todoItem,1);
             }
         })
+        var page = document.querySelector('.name').textContent;
+        if (page === 'All Tasks') {
+            showAllTasks()
+        }
+        else{
 
-        showProjects(projectName);
+            showProjects(projectName);
+        }
         
 
 
