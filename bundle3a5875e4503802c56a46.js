@@ -721,6 +721,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Project)
 /* harmony export */ });
+/* harmony import */ var _projectController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./projectController */ "./src/modules/projectController.js");
+
+
 class Project{
     constructor(name){
         this.name = name;
@@ -742,6 +745,7 @@ class Project{
 
         var delImg = document.createElement('img');
         delImg.setAttribute('src','del.png');
+        delImg.addEventListener('click',_projectController__WEBPACK_IMPORTED_MODULE_0__.projectController.deleteProject);
 
         div.appendChild(dragImg);
         div.appendChild(p);
@@ -772,7 +776,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const projectController = (()=>{
     var projects = [];
-    var allTasks = [];
 
     function addProject(e){
         e.preventDefault();
@@ -807,16 +810,15 @@ const projectController = (()=>{
             return;
         }
         
-        var todo = new _todo__WEBPACK_IMPORTED_MODULE_1__["default"](form[0].value,form[1].value,form[2].value,false)
-        
         var addTodoButton = document.querySelector('.add-todo')
         var projectName = addTodoButton.getAttribute('data-project-name');
+        var todo = new _todo__WEBPACK_IMPORTED_MODULE_1__["default"](form[0].value,form[1].value,form[2].value,projectName,false)
+        
         projects.forEach(project =>{
             if (project.name===projectName) {
                 project.addTodo(todo);
             }
         })
-        allTasks.push(todo);
 
         form[0].value = '';
         form[1].value = '';
@@ -849,7 +851,9 @@ const projectController = (()=>{
     function showAllTasks(){
         var todoList = document.querySelector('.todos');
         todoList.innerHTML = '';
-        allTasks.forEach(todo => todoList.appendChild(todo.addDomElements()));
+        projects.forEach(project=>{
+                project.todos.forEach(todo=>todoList.appendChild(todo.addDomElements()))
+        })
     }
 
     function showProjects(name){
@@ -863,8 +867,33 @@ const projectController = (()=>{
         })
     }
 
+    function deleteTodo(e){
 
-    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects}
+        var projectName = e.target.parentNode.parentNode.getAttribute('data-project-title');
+        var taskTitle = e.target.parentNode.parentNode.querySelector('p');
+        var todoItem;
+        projects.forEach(project=>{
+            if (project.name==projectName) {
+                project.todos.forEach(todo=>{
+                    if(todo.title==taskTitle){
+                        todoItem = todo;
+                    }
+                })
+                project.todos.splice(todoItem,1);
+            }
+        })
+
+        showProjects(projectName);
+        
+
+
+    }
+    function deleteProject(e){
+        console.log(e.target.parentNode)
+    }
+
+
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject}
 })()
 
 
@@ -885,16 +914,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Todo{
-    constructor(title,desc,date,checked){
+    constructor(title,desc,date,project,checked){
         this.title = title;
         this.desc = desc;
         this.date = date;
-        this.checked = checked
+        this.project = project;
+        this.checked = checked;
     }
 
     addDomElements(){
         var mainDiv = document.createElement('div');
         mainDiv.classList.add('todo-item');
+        mainDiv.setAttribute('data-project-title',this.project);
 
         var left = document.createElement('div');
         left.classList.add('left');
@@ -934,6 +965,8 @@ class Todo{
 
         var delImg = document.createElement('img');
         delImg.setAttribute('src','del.png');
+
+        delImg.addEventListener('click',_projectController__WEBPACK_IMPORTED_MODULE_0__.projectController.deleteTodo);
 
         right.appendChild(date);
         right.appendChild(delImg);
@@ -1179,4 +1212,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundlee34a59ae06a3de2cd94f.js.map
+//# sourceMappingURL=bundle3a5875e4503802c56a46.js.map
