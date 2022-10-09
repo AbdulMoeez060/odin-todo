@@ -29,6 +29,7 @@ const projectController = (()=>{
         var projectButton = document.querySelector(".add-project");
 
         projectButton.classList.remove("hide");
+        setLocalStorage()
 
     }
 
@@ -58,6 +59,8 @@ const projectController = (()=>{
         var task = todo.addDomElements();
         var todoList = document.querySelector('.todos');
         todoList.appendChild(task);
+        setLocalStorage()
+
 
     }
 
@@ -119,7 +122,8 @@ const projectController = (()=>{
             showProjects(projectName);
         }
         
-
+        setLocalStorage()
+        
 
     }
     function deleteProject(e){
@@ -132,6 +136,7 @@ const projectController = (()=>{
             }
         })
         projects.splice(proj,1);
+        setLocalStorage()
         showAllProjects();
 
 
@@ -140,11 +145,61 @@ const projectController = (()=>{
     function showAllProjects(){
         var projectItems = document.querySelector('.project-items');
         projectItems.innerHTML = '';
-        projects.forEach(project=> projectItems.appendChild(project.addDomElements()))
+        
+        
+        projects.forEach(project=> {
+            var item =project.addDomElements();
+            item.addEventListener('click',displayController.changeTaskTab)
+
+            projectItems.appendChild(item)
+        })
+    }
+
+    function setLocalStorage(){
+        localStorage.clear('projects');
+        var arr = []
+
+        projects.forEach(project=>{
+            let temp={}
+            temp.name = project.name;
+            temp.todos = [];
+            project.todos.forEach(todo =>{
+                let t = {};
+                t.title = todo.title;
+                t.desc = todo.desc;
+                t.date = todo.date;
+                t.checked = todo.checked;
+                temp.todos.push(t);
+            })
+            arr.push(temp);
+        })
+        localStorage.setItem('projects',JSON.stringify(arr)); 
+    }
+
+    function getLocalStorage(){
+        var items = JSON.parse(localStorage.getItem('projects'))
+        
+        if(items==null){
+            return;
+        }
+        else{
+            Object.entries(items).forEach(proj=>{
+                let project = new Project(proj[1].name);
+                if (proj[1].todos!=null) {
+                    
+                    Object.entries(proj[1].todos).forEach(t=>{
+                        var temp = new Todo(t[1].title,t[1].desc,t[1].date,proj[1].name,t[1].checked);
+                        project.addTodo(temp);
+                    })
+                }
+                projects.push(project);
+            })
+        }
+
     }
 
 
-    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject}
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject,getLocalStorage,setLocalStorage,showAllProjects}
 })()
 
 export {projectController};

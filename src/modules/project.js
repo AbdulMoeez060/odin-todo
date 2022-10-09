@@ -27,6 +27,8 @@ export default class Project{
         div.appendChild(p);
         div.appendChild(delImg);
 
+        
+
         return div;
     }
 }

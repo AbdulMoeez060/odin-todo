@@ -10,7 +10,16 @@ import drag from "./assets/drag.png";
 import { projectController } from "./modules/projectController";
 
 const displayController = (() => {
-  addEvents();
+  function initializeWebsite() {
+    addEvents();
+    projectController.getLocalStorage()
+
+    projectController.showAllProjects()
+    
+    projectController.showAllTasks();
+    
+  }
+
   function addEvents() {
     var menu = document.querySelector(".hamburger");
     var addProjectButton = document.querySelector(".add-project");
@@ -106,9 +115,10 @@ const displayController = (() => {
     }
   }
   
+  
 
-  return {changeTaskTab};
+  return {changeTaskTab,addEvents,initializeWebsite};
 })();
 
-
+displayController.initializeWebsite()
 export {displayController}
