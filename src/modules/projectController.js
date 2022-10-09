@@ -85,6 +85,7 @@ const projectController = (()=>{
         projects.forEach(project=>{
                 project.todos.forEach(todo=>todoList.appendChild(todo.addDomElements()))
         })
+        tasksToday();
     }
 
     function showProjects(name){
@@ -205,6 +206,26 @@ const projectController = (()=>{
             })
         }
 
+    }
+
+    function tasksToday(){
+
+        const date = new Date();
+
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        // This arrangement can be altered based on how we want the date's format to appear.
+        let currentDate = `${month}/${day}/${year}`;
+        console.log(currentDate); // "17-6-2022"
+        projects.forEach(project=>{
+            
+                project.todos.forEach(todo=>{
+                    console.log(todo.date)
+                    console.log(todo.date.toString()==currentDate.toString())
+                })
+        })
     }
 
 
