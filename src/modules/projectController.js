@@ -231,9 +231,31 @@ const projectController = (()=>{
                 })
         })
     }
+    function tasksWeek(){
+        var todoList = document.querySelector('.todos');
+        todoList.innerHTML = '';
 
 
-    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject,getLocalStorage,setLocalStorage,showAllProjects,tasksToday}
+        const date = new Date();
+
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        projects.forEach(project=>{
+            
+                project.todos.forEach(todo=>{
+                    let dates = todo.date.toString().split('/')
+                    if (month.toString()==dates[0] && year.toString()==dates[2] && dates[1]-day.toString()<7 ) {
+                        todoList.appendChild(todo.addDomElements())
+                    }
+                })
+        })
+        
+    }
+
+
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject,getLocalStorage,setLocalStorage,showAllProjects,tasksToday,tasksWeek}
 })()
 
 export {projectController};

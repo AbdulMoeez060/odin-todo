@@ -73,6 +73,7 @@ const displayController = (() => {
     } else if (e.target.classList.contains("week")) {
       heading.innerText = "This Week's Tasks";
       addTodo.classList.add('hide');
+      projectController.tasksWeek();
 
     }
     else if(e.target.classList.contains("project-item")){
