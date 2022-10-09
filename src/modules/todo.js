@@ -1,10 +1,14 @@
 import { projectController } from "./projectController";
+import format from 'date-fns/format'
+
 
 export default class Todo{
     constructor(title,desc,date,project,checked){
         this.title = title;
         this.desc = desc;
-        this.date = date;
+        this.date = format(new Date(date), 'dd/MM/yyyy')
+
+        //this.date = date;
         this.project = project;
         this.checked = checked;
     }

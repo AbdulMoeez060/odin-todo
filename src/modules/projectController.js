@@ -129,6 +129,7 @@ const projectController = (()=>{
     function deleteProject(e){
 
         var projectName = e.target.parentNode.querySelector('p').innerText;
+        e.target.parentNode.classList.remove('active');
         var proj;
         projects.forEach(project=>{
             if(project.name== projectName){
@@ -136,7 +137,15 @@ const projectController = (()=>{
             }
         })
         projects.splice(proj,1);
-        setLocalStorage()
+        setLocalStorage();
+       
+
+        var heading = document.querySelector(".name");
+        var addTodo = document.querySelector('.add-todo');
+
+        heading.innerText = "All Tasks";
+        addTodo.classList.add('hide');
+
         showAllProjects();
 
 
