@@ -606,7 +606,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const displayController = (() => {
-  addEvents();
+  function initializeWebsite() {
+    addEvents();
+    _modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.getLocalStorage()
+
+    _modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.showAllProjects()
+    
+    _modules_projectController__WEBPACK_IMPORTED_MODULE_9__.projectController.showAllTasks();
+    
+  }
+
   function addEvents() {
     var menu = document.querySelector(".hamburger");
     var addProjectButton = document.querySelector(".add-project");
@@ -702,11 +711,12 @@ const displayController = (() => {
     }
   }
   
+  
 
-  return {changeTaskTab};
+  return {changeTaskTab,addEvents,initializeWebsite};
 })();
 
-
+displayController.initializeWebsite()
 
 
 /***/ }),
@@ -750,6 +760,8 @@ class Project{
         div.appendChild(dragImg);
         div.appendChild(p);
         div.appendChild(delImg);
+
+        
 
         return div;
     }
@@ -801,6 +813,7 @@ const projectController = (()=>{
         var projectButton = document.querySelector(".add-project");
 
         projectButton.classList.remove("hide");
+        setLocalStorage()
 
     }
 
@@ -830,6 +843,8 @@ const projectController = (()=>{
         var task = todo.addDomElements();
         var todoList = document.querySelector('.todos');
         todoList.appendChild(task);
+        setLocalStorage()
+
 
     }
 
@@ -891,7 +906,8 @@ const projectController = (()=>{
             showProjects(projectName);
         }
         
-
+        setLocalStorage()
+        
 
     }
     function deleteProject(e){
@@ -904,6 +920,7 @@ const projectController = (()=>{
             }
         })
         projects.splice(proj,1);
+        setLocalStorage()
         showAllProjects();
 
 
@@ -912,11 +929,61 @@ const projectController = (()=>{
     function showAllProjects(){
         var projectItems = document.querySelector('.project-items');
         projectItems.innerHTML = '';
-        projects.forEach(project=> projectItems.appendChild(project.addDomElements()))
+        
+        
+        projects.forEach(project=> {
+            var item =project.addDomElements();
+            item.addEventListener('click',___WEBPACK_IMPORTED_MODULE_2__.displayController.changeTaskTab)
+
+            projectItems.appendChild(item)
+        })
+    }
+
+    function setLocalStorage(){
+        localStorage.clear('projects');
+        var arr = []
+
+        projects.forEach(project=>{
+            let temp={}
+            temp.name = project.name;
+            temp.todos = [];
+            project.todos.forEach(todo =>{
+                let t = {};
+                t.title = todo.title;
+                t.desc = todo.desc;
+                t.date = todo.date;
+                t.checked = todo.checked;
+                temp.todos.push(t);
+            })
+            arr.push(temp);
+        })
+        localStorage.setItem('projects',JSON.stringify(arr)); 
+    }
+
+    function getLocalStorage(){
+        var items = JSON.parse(localStorage.getItem('projects'))
+        
+        if(items==null){
+            return;
+        }
+        else{
+            Object.entries(items).forEach(proj=>{
+                let project = new _project__WEBPACK_IMPORTED_MODULE_0__["default"](proj[1].name);
+                if (proj[1].todos!=null) {
+                    
+                    Object.entries(proj[1].todos).forEach(t=>{
+                        var temp = new _todo__WEBPACK_IMPORTED_MODULE_1__["default"](t[1].title,t[1].desc,t[1].date,proj[1].name,t[1].checked);
+                        project.addTodo(temp);
+                    })
+                }
+                projects.push(project);
+            })
+        }
+
     }
 
 
-    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject}
+    return {addProject,addTodoTask,toggleTaskCheck,showAllTasks,showProjects,deleteTodo,deleteProject,getLocalStorage,setLocalStorage,showAllProjects}
 })()
 
 
@@ -1235,4 +1302,4 @@ module.exports = __webpack_require__.p + "week.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=bundlef1df41e6e2dec41d5028.js.map
+//# sourceMappingURL=bundle61b6e562182798274c77.js.map
