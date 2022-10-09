@@ -174,7 +174,7 @@ button:active,
   gap: 15px;
 }
 
-.project-form input[type="text"] {
+.project-form input[name="project-name"] {
   width: 80%;
   height: 30px;
   border: black 2px solid;
@@ -329,6 +329,7 @@ button:active,
 }
 
 .todo-form input[type="text"],
+input[name="title"],
 textarea,
 input[type="date"] {
   width: 100%;
@@ -352,7 +353,7 @@ input[type="date"] {
 .project-item p {
   pointer-events: none;
 }
-.project-item.active{
+.project-item.active {
   background-color: var(--bgColor2);
 }
 @media (max-width: 930px) {
