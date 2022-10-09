@@ -68,6 +68,7 @@ const displayController = (() => {
     } else if (e.target.classList.contains("today")) {
       heading.innerText = "Today's Tasks";
       addTodo.classList.add('hide');
+      projectController.tasksToday()
 
     } else if (e.target.classList.contains("week")) {
       heading.innerText = "This Week's Tasks";
