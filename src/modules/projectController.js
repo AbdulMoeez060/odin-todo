@@ -77,6 +77,7 @@ const projectController = (()=>{
                 }
             });
         })
+        setLocalStorage();
     }
 
     function showAllTasks(){
